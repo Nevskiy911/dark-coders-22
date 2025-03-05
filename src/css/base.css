@@ -3,13 +3,13 @@ html {
 }
 
 body {
-  background-color: #fbfbfb;
-  font-family: Gilroy, sans-serif;
+  background-color: #1C1D20;
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.29;
+  font-size: 16px;
+  line-height: 150%;
   letter-spacing: -0.02em;
-  color: rgba(12, 12, 12, 0.7);
+  color: var(--main-text);
 }
 
 .visually-hidden {
