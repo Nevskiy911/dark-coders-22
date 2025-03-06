@@ -1,0 +1,39 @@
+.hero-bg {
+    height: 812px;
+}
+
+.greeting {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    padding: 281px 0;
+}
+
+.social-media-list {
+    display: flex;
+    gap: 4px;
+}
+
+.hero-social-link {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 18px;
+}
+
+@media screen and (min-width: 768px) {
+    .hero-bg {
+        height: 1024px;
+    }
+
+    .greeting {
+        font-size: 90px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .hero-bg {
+        height: 900px;
+    }
+}
