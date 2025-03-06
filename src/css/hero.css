@@ -1,5 +1,7 @@
 .hero-bg {
+    position: relative;
     height: 812px;
+    width: 100%;
 }
 
 .greeting {
@@ -9,17 +11,24 @@
     letter-spacing: -0.03em;
     text-transform: uppercase;
     padding: 281px 0;
+    max-width: 350px;
+    white-space: normal;
+    color: #FAFAFA;
 }
 
 .social-media-list {
     display: flex;
     gap: 4px;
+    position: absolute;
+    bottom: 42px;
+    right: 29px;
 }
+
 
 .hero-social-link {
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 60px;
-    padding: 18px;
+    padding: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -27,13 +36,24 @@
         height: 1024px;
     }
 
+    .hero-social-link {
+        padding: 18px;
+    }
+
     .greeting {
         font-size: 90px;
+        max-width: 632px;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .hero-bg {
         height: 900px;
+    }
+
+    .greeting {
+        width: 1180px;
+        margin: 0 auto;
+        width: max-content;
     }
 }
