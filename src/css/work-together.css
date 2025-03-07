@@ -1,6 +1,28 @@
 .work-together-container {
+    position: relative;
     padding-top: 32px;
     padding-bottom: 32px;
+}
+
+.backgr-container {
+    position: absolute;
+    z-index: 0;
+    width: 86px;
+    height: 100%;
+    top: 0;
+    right: 0px;
+    background-image: url(./img//work-together/backgr-mob-1x.webp);
+}
+
+@media screen and (min-resolution: 192dpi) {
+    .backgr-container {
+        background-image: url(./img//work-together/backgr-mob-2x.webp);
+    }
+}
+
+.content {
+    z-index: 1;
+    position: relative;
 }
 
 .work-img {
@@ -19,7 +41,7 @@
     font-weight: 500;
     font-size: 40px;
     line-height: 1;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.06em;
     text-transform: uppercase;
     color: #fafafa;
 }
@@ -131,6 +153,17 @@
         padding-bottom: 169px;
     }
 
+    .backgr-container {
+        width: 198px;
+        background-image: url(./img//work-together/backgr-tab-1x.webp);
+    }
+    
+    @media screen and (min-resolution: 192dpi) {
+        .backgr-container {
+            background-image: url(./img//work-together/backgr-tab-2x.webp);
+        }
+    }
+
     .wrapper {
         margin-bottom: 18px;
     }
@@ -186,6 +219,17 @@
     .work-together-container {
         padding-left: 196px;
         padding-right: 196px;
+    }
+
+    .backgr-container {
+        width: 400px;
+        background-image: url(./img//work-together/backgr-tab-1x.webp);
+    }
+    
+    @media screen and (min-resolution: 192dpi) {
+        .backgr-container {
+            background-image: url(./img//work-together/backgr-tab-2x.webp);
+        }
     }
 
     .email,
