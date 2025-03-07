@@ -1,7 +1,15 @@
 .hero-bg {
+    background-image: url('../img/hero/bg-mob-x1.png');
     position: relative;
     height: 812px;
     width: 100%;
+}
+
+@media screen and (min-width: 320px) and (-webkit-min-device-pixel-ratio: 2),
+screen and (min-width: 320px) and (min-resolution: 192dpi) {
+    .hero-bg {
+        background-image: url('../img/hero/bg-mob-x2.png');
+    }
 }
 
 .greeting {
@@ -10,9 +18,8 @@
     line-height: 1;
     letter-spacing: -0.03em;
     text-transform: uppercase;
-    padding: 281px 0;
-    max-width: 350px;
-    white-space: normal;
+    padding-top: 281px;
+    width: 350px;
     color: #FAFAFA;
 }
 
@@ -22,6 +29,7 @@
     position: absolute;
     bottom: 42px;
     right: 29px;
+    width: 342px;
 }
 
 
@@ -34,7 +42,23 @@
 @media screen and (min-width: 768px) {
     .hero-bg {
         height: 1024px;
+        background-image: url('../img/hero/bg-tab-x1.png');
     }
+
+    @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-width: 768px) and (min-resolution: 192dpi) {
+        .hero-bg {
+            background-image: url('../img/hero/bg-tab-x2.png');
+        }
+    }
+
+    .social-media-list {
+        gap: 8px;
+        bottom: 50px;
+        right: 56px;
+        width: 473px;
+    }
+
 
     .hero-social-link {
         padding: 18px;
@@ -42,18 +66,32 @@
 
     .greeting {
         font-size: 90px;
-        max-width: 632px;
+        width: 632px;
+        padding-top: 300px;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .hero-bg {
         height: 900px;
+        background-image: url('../img/hero/bg-desk-x1.png');
+    }
+
+    @media screen and (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+        .hero-bg {
+            background-image: url('../img/hero/bg-desk-x2.png');
+        }
+    }
+
+    .social-media-list {
+        gap: 8px;
+        bottom: 32px;
+        right: 32px;
     }
 
     .greeting {
-        width: 1180px;
         margin: 0 auto;
-        width: max-content;
+        width: 1172px;
     }
 }
