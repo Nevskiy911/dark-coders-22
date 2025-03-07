@@ -1,0 +1,70 @@
+<footer class="work-together" id="work-together">
+  <div class="container">
+    <div class="wrapper">
+      <picture class="image">
+        <source
+          srcset="
+            ./img/work-together/work-together-desc-1x.webp 1x,
+            ./img/work-together/work-together-desc-2x.webp 2x
+          "
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="
+            ./img/work-together/work-together-tab-1x.webp 1x,
+            ./img/work-together/work-together-tab-2x.webp 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./img/work-together/work-together-mob-1x.webp 1x,
+            ./img/work-together/work-together-mob-2x.webp 2x
+          "
+          media="(max-width: 767px)"
+        />
+        <img
+          class="work-img"
+          src="./img/work-together/work-together-mob-1x.webp"
+          alt="Developer's photo"
+        />
+      </picture>
+      <h2 class="work-title">
+        Let’s <span class="work-span">work</span
+        ><span class="visually-hidden"> together</span>
+      </h2>
+    </div>
+    <form class="contact-form">
+      <input
+        type="email"
+        name="form-email"
+        class="email"
+        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        placeholder="clients@gmail.com"
+        required
+      />
+      <textarea
+        name="comments"
+        class="form-comment"
+        rows="1"
+        placeholder="comments"
+        required
+      ></textarea>
+      <button class="form-button" type="submit">send</button>
+    </form>
+    <address class="address">
+      <ul class="address-list">
+        <li class="address-item">
+          <a class="address-link" href="mailto:lloydjefferson@gmail.com"
+            >lloydjefferson@gmail.com</a
+          >
+        </li>
+        <li class="address-item">
+          <a class="address-link" href="tel:3801111111111"
+            >+380 11 1111 11 11</a
+          >
+        </li>
+      </ul>
+    </address>
+  </div>
+</footer>
