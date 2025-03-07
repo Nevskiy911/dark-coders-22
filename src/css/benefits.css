@@ -63,7 +63,7 @@
     align-items: center;
 }
 
-.benefits-link-button:hover
+.benefits-link-button:hover,
 .benefits-link-button:focus {
     background-color: #A6C015;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -105,7 +105,3 @@
         width: 680px;
     }
 }
-
-
-
-        
