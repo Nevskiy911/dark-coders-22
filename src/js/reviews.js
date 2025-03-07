@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import { Navigation, Keyboard } from 'swiper/modules';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 import axios from 'axios';
 
@@ -9,9 +9,8 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const refs = {
   sliderContainer: document.querySelector('.swiper-wrapper'),
+  slider: document.querySelector('.swiper'),
 };
-
-// --------------------Axios---------------------------
 
 const BASE_URL = 'https://portfolio-js.b.goit.study/api';
 const END_POINT = '/reviews';
@@ -23,11 +22,16 @@ const fetchReviews = async () => {
   } catch (error) {
     iziToast.error({
       title: 'Error',
-      message: 'Failed to fetch reviews. Please try again later.',
+      message: `${error}`,
       position: 'topRight',
     });
     return null;
   }
+};
+
+const renderError = () => {
+  refs.sliderContainer.innerHTML = `<li class="swiper-placeholder">Not found</li>`;
+  refs.slider.classList.remove('swiper');
 };
 
 const createReviewsMarkup = reviews => {
@@ -47,6 +51,7 @@ const createReviewsMarkup = reviews => {
 const initReviews = async () => {
   const reviews = await fetchReviews();
   if (!reviews || reviews.length === 0) {
+    renderError();
     return;
   }
 
@@ -57,9 +62,13 @@ initReviews();
 
 // --------------------Swiper--------------------------
 new Swiper('.swiper', {
-  modules: [Navigation, Keyboard],
+  modules: [Navigation, Keyboard, Mousewheel],
   slidesPerView: 1,
   spaceBetween: 16,
+  autoHeight: true,
+  speed: 700,
+  grabCursor: true,
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -70,9 +79,12 @@ new Swiper('.swiper', {
     onlyInViewport: true,
   },
 
+  // mousewheel: {
+  //   sensitivity: 1,
+  // },
+
   breakpoints: {
-    365: { slidesPerView: 1 },
     768: { slidesPerView: 2 },
-    1280: { slidesPerView: 4 },
+    1440: { slidesPerView: 4 },
   },
 });

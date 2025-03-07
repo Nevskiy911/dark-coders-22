@@ -1,6 +1,7 @@
 .reviews {
   padding: 64px 16px;
 }
+
 .reviews-header {
   margin-bottom: 32px;
 }
@@ -15,6 +16,11 @@
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.swiper-placeholder {
+  font-size: 1.5rem;
+  margin: 0 auto;
 }
 
 .swiper-slide {
