@@ -1,5 +1,6 @@
 import axios from "axios";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import { openModal } from "./modal-work-tog";
 
 const refs = {
     form: document.querySelector('.contact-form'),
@@ -19,7 +20,7 @@ form.addEventListener('submit', async (evt) => {
     const userComment = form.elements.comments.value.trim();
     const response = await postRequest(userEmail, userComment);
     if (response.status === 201) {
-        // openModal(response.data);
+        openModal(response.data);
         form.reset();
         resetValidation();
     } else {
