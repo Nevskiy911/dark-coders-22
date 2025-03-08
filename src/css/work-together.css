@@ -11,12 +11,12 @@
     height: 100%;
     top: 0;
     right: 0px;
-    background-image: url(./img//work-together/backgr-mob-1x.webp);
+    background-image: url(/img/work-together/backgr-mob-1x.webp);
 }
 
 @media screen and (min-resolution: 192dpi) {
     .backgr-container {
-        background-image: url(./img//work-together/backgr-mob-2x.webp);
+        background-image: url(/img/work-together/backgr-mob-2x.webp);
     }
 }
 
@@ -48,6 +48,7 @@
 
 .work-title {
     margin-bottom: 8px;
+    padding-top: 3px;
 }
 
 .work-span {
@@ -56,6 +57,10 @@
 
 .contact-form {
     margin-bottom: 64px;
+}
+
+.email-wrapper {
+    margin-bottom: 16px;
 }
 
 .email,
@@ -75,7 +80,7 @@
 }
 
 .email {
-    margin-bottom: 16px;
+    margin-bottom: 4px;
 }
 
 .form-comment {
@@ -101,7 +106,7 @@
     height: 100px;
     border: none;
     border-radius: 50%;
-    background-color: #c6e327;;
+    background-color: #c6e327;
     color: #fafafa;
     text-transform: capitalize;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -147,6 +152,37 @@
     letter-spacing: -0.1em;
 }
 
+.success {
+    border-color: #3cbc81 !important;
+}
+
+.error {
+    border-color: #e74a3b !important;
+}
+
+.message {
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.success-text {
+    color: #3cbc81;
+    line-height: 1.28571;
+    display: block;
+}
+
+.error-text {
+    color: #e74a3b;
+    line-height: 1.28571;
+    display: block;
+}
+
+.custom-ok-button {
+    background-color: #1C1D20 !important;
+    color: #fafafa !important;
+}
+
 @media screen and (min-width: 768px){
     .work-together-container {
         padding-top: 80px;
@@ -155,12 +191,12 @@
 
     .backgr-container {
         width: 198px;
-        background-image: url(./img//work-together/backgr-tab-1x.webp);
+        background-image: url(/img/work-together/backgr-tab-1x.webp);
     }
     
     @media screen and (min-resolution: 192dpi) {
         .backgr-container {
-            background-image: url(./img//work-together/backgr-tab-2x.webp);
+            background-image: url(/img/work-together/backgr-tab-2x.webp);
         }
     }
 
@@ -181,6 +217,7 @@
 
     .work-title {
         margin-bottom: 10px;
+        padding-top: 4px;
     }
 
     .contact-form {
@@ -190,6 +227,10 @@
         margin-bottom: 18px;
     }
 
+    .email-wrapper {
+        margin-bottom: 0;
+    }
+    
     .email, .form-comment {
         width: 245px;
         padding-top: 46px;
@@ -223,12 +264,12 @@
 
     .backgr-container {
         width: 400px;
-        background-image: url(./img//work-together/backgr-tab-1x.webp);
+        background-image: url(/img/work-together/backgr-desc-1x.webp);
     }
     
     @media screen and (min-resolution: 192dpi) {
         .backgr-container {
-            background-image: url(./img//work-together/backgr-tab-2x.webp);
+            background-image: url(/img/work-together/backgr-desc-2x.webp);
         }
     }
 
