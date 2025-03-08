@@ -126,9 +126,9 @@ const initReviews = async () => {
       onlyInViewport: true,
     },
 
-    mousewheel: {
-      sensitivity: 1,
-    },
+    // mousewheel: {
+    //   sensitivity: 1,
+    // },
 
     breakpoints: {
       320: { slidesPerView: 1, autoHeight: true },
