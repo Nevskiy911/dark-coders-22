@@ -1,7 +1,7 @@
 const titleModal = document.querySelector('.title-modal');
 const textModal = document.querySelector('.text-modal');
 
-function openModal(modalId) {
+export function openModal(modalId) {
   const modal = document.getElementById(modalId);
 
   if (!modal) {
