@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+</head>
+
+<body>
+
+    <section class="about container">
+        <h1 class="visually-hidden">About Me</h1>
+
+        <div class="about-content">
+            <div class="about-text">
+                <p class="intro">
+                    I WORK WITH PEOPLE ALL OVER THE WORLD TO CREATE IMPRESSIVE AND
+                    <span class="highlight">FUNCTIONAL</span> <span class="highlight-2">WEBSITES</span>
+                    THAT REFLECT EACH CLIENT'S UNIQUE PERSONALITY.
+                </p>
+            </div>
+
+            <div class="about-image">
+                <picture>
+                    <source srcset="./img/about-me/image-1x-dex.png 1x, ./img/about-me/image-2x-dex.png 2x"
+                        media="(min-width:1440px)">
+                    <source srcset="./img/about-me/image-1x-lap.png 1x, ./img/about-me/image-2x-lap.png 2x"
+                        media="(min-width:768px)">
+                    <source srcset="./img/about-me/image-1x-tel.png 1x, ./img/about-me/image-2x-tel.png 2x"
+                        media="(max-width:767px)">
+                    <img src="./img/about-me/image-1x-tel.png" alt="Photo of a web developer" class="about-me-img">
+                </picture>
+            </div>
+        </div>
+
+        <ul class="accordion accordion-about">
+            <li class="accordion-item accordion-item-about active">
+                <button class="accordion-header accordion-header-about">
+                    ABOUT ME
+                    <span class="arrow arrow-about"></span>
+                </button>
+                <div class="accordion-content accordion-content-about">
+                    <p class="text-1">I am Lloyd Jefferson, a talented programmer with extensive expertise in software
+                        development. I
+                        have an understanding of
+                        different programming languages and technologies, always ready to improve my skills. I always
+                        follow the latest trends
+                        and look for unconventional, creative solutions to problems. I have a high level of analytical
+                        skills and am able to
+                        effectively solve even the most difficult tasks encountered on the way.</p>
+                    <p>Able to work both independently and in a team. I can effectively cooperate with colleagues,
+                        exchanging ideas and finding
+                        optimal solutions. Professional maturity allows you to calmly cope with challenges and stressful
+                        situations, while
+                        maintaining a high quality of work. I am always looking for opportunities for self-improvement.
+                        I actively study new
+                        technologies and practices to stay abreast of the latest innovations. I have a strong
+                        understanding of various
+                        programming languages, frameworks and architectural concepts that allow me to create efficient
+                        and scalable software.</p>
+                </div>
+            </li>
+            <li class="accordion-item accordion-item-about">
+                <button class="accordion-header accordion-header-about">
+                    ROLE
+                    <span class="arrow arrow-about"></span>
+                </button>
+                <div class="accordion-content accordion-content-about">
+                    <p>Frontend Developer</p>
+                    <p>HeadlessCMS,Wordpress</p>
+                    <p>Blender(enjoy)</p>
+                </div>
+            </li>
+            <li class="accordion-item accordion-item-about">
+                <button class="accordion-header accordion-header-about">
+                    EDUCATION
+                    <span class="arrow arrow-about"></span>
+                </button>
+                <div class="accordion-content accordion-content-about">
+                    <p>2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York</p>
+                    <P>2019 - 2020 / Advanced Web Development Certificate, GoIT IT School, New York</P>
+                    <P>2020 - 2022 / Advanced Blender Animation Techniques, Udemy</P>
+                </div>
+            </li>
+        </ul>
+
+
+        <div class="skills">
+            <div class="swiper swiper-about">
+                <div class="swiper-wrapper swiper-wrapper-about">
+                    <div class="swiper-slide swiper-slide-about">HTML/CSS</div>
+                    <div class="swiper-slide swiper-slide-about">JavaScript</div>
+                    <div class="swiper-slide swiper-slide-about">React</div>
+                    <div class="swiper-slide swiper-slide-about">Node.js</div>
+                    <div class="swiper-slide swiper-slide-about">React Native</div>
+                    <div class="swiper-slide swiper-slide-about">Soft Skills</div>
+                </div>
+                <div class="swiper-button-next swiper-button-next-about"></div>
+                <div class="swiper-button-prev swiper-button-prev-about"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./about-me.js"></script>
+
+</body>
+
+</html>
