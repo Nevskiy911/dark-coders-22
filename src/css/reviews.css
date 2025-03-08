@@ -6,12 +6,12 @@
   margin-bottom: 32px;
 }
 
-.swiper {
+.swiper-reviews {
   position: relative;
   overflow: hidden;
 }
 
-.swiper-wrapper {
+.swiper-wrapper-reviews {
   display: flex;
   padding: 0;
   margin: 0;
@@ -23,7 +23,7 @@
   margin: 0 auto;
 }
 
-.swiper-slide {
+.reviews-card {
   box-sizing: border-box;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
