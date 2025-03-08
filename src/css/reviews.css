@@ -19,7 +19,7 @@
 }
 
 .swiper-placeholder {
-  font-size: 1.5rem;
+  font-size: 32px;
   margin: 0 auto;
 }
 
@@ -46,19 +46,11 @@
 @media only screen and (min-width: 768px) {
   .reviews {
     padding: 96px 32px;
-
-    .reviews-cards-wrapper {
-      max-width: 704px;
-    }
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .reviews {
     padding: 164px 32px;
-
-    .reviews-cards-wrapper {
-      max-width: 1376px;
-    }
   }
 }
