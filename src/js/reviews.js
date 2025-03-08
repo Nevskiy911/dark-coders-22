@@ -8,8 +8,8 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const refs = {
-  sliderContainer: document.querySelector('.swiper-wrapper'),
-  slider: document.querySelector('.swiper'),
+  sliderContainer: document.querySelector('.swiper-wrapper-reviews'),
+  slider: document.querySelector('.swiper-reviews'),
   reviewsSection: document.querySelector('#reviews'),
 };
 
@@ -28,7 +28,7 @@ const fetchReviews = async () => {
 
 const renderError = () => {
   refs.sliderContainer.innerHTML = `<li class="swiper-placeholder">Not found</li>`;
-  refs.slider.classList.remove('swiper');
+  refs.slider.classList.remove('swiper-reviews');
 };
 
 const errorToast = () => {
@@ -73,7 +73,7 @@ const createReviewsMarkup = reviews => {
 };
 
 const setDynamicHeight = () => {
-  const slides = document.querySelectorAll('.swiper-slide');
+  const slides = document.querySelectorAll('.reviews-card');
   let maxHeight = 0;
 
   const observer = new IntersectionObserver(
@@ -109,7 +109,7 @@ const initReviews = async () => {
 
   refs.sliderContainer.innerHTML = createReviewsMarkup(reviews);
 
-  new Swiper('.swiper', {
+  new Swiper('.swiper-reviews', {
     modules: [Navigation, Keyboard, Mousewheel],
     slidesPerView: 1,
     spaceBetween: 16,
@@ -117,8 +117,8 @@ const initReviews = async () => {
     grabCursor: true,
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-reviews-next',
+      prevEl: '.swiper-button-reviews-prev',
     },
 
     keyboard: {
