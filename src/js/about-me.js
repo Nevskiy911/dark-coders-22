@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateFirstSlideColor();
 
-    // Открытие/закрытие секций и поворот стрелок
     const accordionItems = document.querySelectorAll(".accordion-item");
 
     accordionItems.forEach((item, index) => {
@@ -46,17 +45,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const content = item.querySelector(".accordion-content");
         const arrow = header.querySelector(".arrow");
 
-        // Устанавливаем начальные стили
+
         content.style.overflow = "hidden";
         content.style.transition = "max-height 0.3s ease-in-out";
 
         if (index === 0) {
-            // Первая секция открыта по умолчанию
+
             item.classList.add("active");
             content.style.maxHeight = content.scrollHeight + "px";
             arrow.style.transform = "rotate(180deg)";
         } else {
-            // Остальные секции закрыты
+
             content.style.maxHeight = "0";
             arrow.style.transform = "rotate(0deg)";
         }

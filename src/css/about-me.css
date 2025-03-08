@@ -103,12 +103,11 @@
 
 .accordion-header-about .arrow-about {
     transform: rotate(0);
-    /* Стрелка направлена вправо по умолчанию */
 }
 
 .accordion-item-about.active .arrow-about {
     transform: rotate(180deg);
-    /* Стрелка направлена вниз, если секция открыта */
+
 }
 
 .swiper-about {
