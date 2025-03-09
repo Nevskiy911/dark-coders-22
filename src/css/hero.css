@@ -38,6 +38,14 @@
   color: #fafafa;
 }
 
+.it-link {
+  padding: 10px 12px;
+}
+
+.yt-link {
+  padding: 10px 11px;
+}
+
 .gh-link {
   padding: 10px 8px;
 }
