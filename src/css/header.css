@@ -49,6 +49,7 @@
 
 /* Стилі для кнопки меню */
 .menu-toggle {
+  display: block;
   background: none;
   border: none;
   cursor: pointer;
@@ -56,16 +57,17 @@
   padding: 0;
 }
 
-.menu-toggle img {
+.menu-toggle-text {
+  display: none;
+}
+
+.menu-toggle-img {
+  display: block;
   width: 28px;
   height: 28px;
 }
 
-/* .menu-toggle-text {
-  display: none;
-}
-
-.menu-toggle-icon {
+/*.menu-toggle-icon {
   position: relative;
   width: 24px;
   height: 2px;
@@ -137,7 +139,19 @@
 } */
 
 /* Стилі для навігації */
+
+.navigation,
+.menu-close {
+  display: none;
+}
+
+.menu.active .navigation,
+.menu.active .menu-close {
+  display: block;
+}
+
 .navigation {
+  display: none;
   margin: auto;
 }
 
@@ -191,6 +205,14 @@
   background-color: #a0bc22;
 }
 
+.desktop-order-button {
+  display: none;
+}
+
+.mobile-order-button {
+  display: block;
+}
+
 /* Стилі для оверлею */
 .menu-overlay {
   position: fixed;
@@ -212,17 +234,88 @@
 
 /* Медіа-запити */
 @media (min-width: 768px) {
-  .menu-toggle__text {
-    display: inline-block;
+  .header-container {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 16px 32px;
+  }
+
+  .menu-toggle {
+    padding: 10px;
+  }
+
+  .menu-toggle-text {
+    display: inline;
+    text-decoration: underline;
+  }
+
+  .menu-toggle-img {
+    display: none;
   }
 
   .menu {
-    width: 50%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+    height: auto;
+    background: none;
+    /* flex-direction: column; */
+    /* justify-content: flex-start; */
+    padding: 0;
+    transition: all 0.3s ease;
+    display: none;
+  }
+
+  .menu.active {
+    display: block;
+    transform: translateX(-50%);
+  }
+
+  .menu-header {
+    display: none;
+  }
+
+  .navigation-list {
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 16px 32px;
+  }
+
+  .navigation-item {
+    margin: 0 16px;
+    text-align: center;
+  }
+
+  .navigation-link {
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .navigation-link::after {
+    display: none;
+  }
+
+  .order-button {
+    margin-top: 0;
+    padding: 18px 24px;
+  }
+  .btn-order-container {
+    padding: 0;
+  }
+
+  .desktop-order-button {
+    display: block;
+  }
+  .mobile-order-button {
+    display: none;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1440px) {
   .menu {
-    width: 40%;
+    min-width: 200px;
   }
 }
