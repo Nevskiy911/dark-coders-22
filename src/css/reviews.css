@@ -69,6 +69,10 @@
   pointer-events: none;
 }
 
+.hidden-btn {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .reviews {
     padding: 96px 32px;
