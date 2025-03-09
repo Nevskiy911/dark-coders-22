@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 
 import axios from 'axios';
 
@@ -110,7 +110,7 @@ const initReviews = async () => {
   refs.sliderContainer.innerHTML = createReviewsMarkup(reviews);
 
   new Swiper('.swiper-reviews', {
-    modules: [Navigation, Keyboard, Mousewheel],
+    modules: [Navigation, Keyboard],
     slidesPerView: 1,
     spaceBetween: 16,
     speed: 500,
@@ -125,10 +125,6 @@ const initReviews = async () => {
       enabled: true,
       onlyInViewport: true,
     },
-
-    // mousewheel: {
-    //   sensitivity: 1,
-    // },
 
     breakpoints: {
       320: { slidesPerView: 1, autoHeight: true },
