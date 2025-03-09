@@ -62,6 +62,11 @@
   background-color: #1c1d20;
 }
 
+.swiper-button-reviews-prev:hover .reviews-icon-btn,
+.swiper-button-reviews-next:hover .reviews-icon-btn {
+  color: blue; /* Змінюється колір при наведенні */
+}
+
 .swiper-button-reviews-prev.swiper-button-disabled,
 .swiper-button-reviews-next.swiper-button-disabled {
   opacity: 0.35;

@@ -31,6 +31,7 @@ const renderError = () => {
   refs.sliderContainer.innerHTML = `<li class="swiper-placeholder">Not found</li>`;
   refs.slider.classList.remove('swiper-reviews');
   refs.btnBlock.classList.add('hidden-btn');
+  refs.reviewsSection.style.paddingBottom = '64px';
 };
 
 const errorToast = () => {
