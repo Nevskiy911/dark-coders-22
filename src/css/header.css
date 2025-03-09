@@ -12,7 +12,7 @@
   background-color: transparent;
 }
 
-.header__container {
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,21 +25,21 @@
   gap: 10px;
 }
 
-.logo__image {
+.logo-image {
   width: 40px;
   height: 40px;
   overflow: hidden;
   border-radius: 8px;
 }
 
-.logo__image img {
+.logo-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.logo__text {
-  font-size: 24px;
+.logo-text {
+  font-size: 19px;
   font-weight: 500;
   color: #fff;
 }
@@ -55,19 +55,19 @@
   color: #fff;
 }
 
-.menu-toggle__text {
+.menu-toggle-text {
   display: none;
 }
 
-.menu-toggle__icon {
+.menu-toggle-icon {
   position: relative;
   width: 24px;
   height: 2px;
   background-color: #fff;
 }
 
-.menu-toggle__icon::before,
-.menu-toggle__icon::after {
+.menu-toggle-icon::before,
+.menu-toggle-icon::after {
   content: '';
   position: absolute;
   width: 24px;
@@ -76,11 +76,11 @@
   transition: transform 0.3s ease;
 }
 
-.menu-toggle__icon::before {
+.menu-toggle-icon::before {
   top: -8px;
 }
 
-.menu-toggle__icon::after {
+.menu-toggle-icon::after {
   bottom: -8px;
 }
 
@@ -104,19 +104,19 @@
   right: 0;
 }
 
-.menu__header {
+.menu-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
 }
 
-.menu__title {
+.menu-title {
   color: #ccc;
   font-size: 16px;
 }
 
-.menu__close {
+.menu-close {
   background: none;
   border: none;
   color: #fff;
@@ -124,7 +124,7 @@
   cursor: pointer;
 }
 
-.menu__close-icon {
+.menu-close-icon {
   font-size: 24px;
 }
 
@@ -133,17 +133,17 @@
   margin: auto;
 }
 
-.navigation__list {
+.navigation-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.navigation__item {
+.navigation-item {
   text-align: center;
 }
 
-.navigation__link {
+.navigation-link {
   color: #fff;
   font-size: 18px;
   transition: color 0.3s ease;
@@ -151,7 +151,7 @@
   display: inline-block;
 }
 
-.navigation__link::after {
+.navigation-link::after {
   content: '';
   position: absolute;
   left: 0;
@@ -161,7 +161,7 @@
   background-color: #fff;
 }
 
-.navigation__link:hover {
+.navigation-link:hover {
   color: #e83b3b;
 }
 

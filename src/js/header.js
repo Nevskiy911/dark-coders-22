@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Вибираємо необхідні елементи DOM
   const menuToggle = document.querySelector('.menu-toggle');
-  const menuClose = document.querySelector('.menu__close');
+  const menuClose = document.querySelector('.menu-close');
   const menu = document.querySelector('.menu');
   const menuOverlay = document.querySelector('.menu-overlay');
-  const navLinks = document.querySelectorAll('.navigation__link');
+  const navLinks = document.querySelectorAll('.navigation-link');
   const orderButton = document.querySelector('.order-button');
   const body = document.body;
 
