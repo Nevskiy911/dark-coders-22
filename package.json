@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/new-dark-coders/",
+    "build": "vite build --base=/dark-coders-22/",
     "preview": "vite preview"
   },
   "devDependencies": {
