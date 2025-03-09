@@ -38,6 +38,14 @@
     color: #FAFAFA;
 }
 
+.it-link {
+    padding: 10px 12px;
+}
+
+.yt-link {
+    padding: 10px 11px;
+}
+
 .gh-link {
     padding: 10px 8px;
 }
@@ -78,6 +86,14 @@
         width: 55px;
         height: 55px;
         font-size: 16px;
+    }
+
+    .it-link {
+        padding: 18px 20px;
+    }
+    
+    .fb-link {
+        padding: 18px 17px;
     }
 
     .gh-link {
