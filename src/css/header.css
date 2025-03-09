@@ -55,6 +55,7 @@
   cursor: pointer;
   color: #fafafa;
   padding: 0;
+  margin-left: auto;
 }
 
 .menu-toggle-text {
@@ -67,31 +68,8 @@
   height: 28px;
 }
 
-/*.menu-toggle-icon {
-  position: relative;
-  width: 24px;
-  height: 2px;
-  background-color: #fafafa;
-}
-
-.menu-toggle-icon::before,
-.menu-toggle-icon::after {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  background-color: #fff;
-  transition: transform 0.3s ease;
-}
-.menu-toggle-icon::before {
-  top: -8px;
-}
-.menu-toggle-icon::after {
-  bottom: -8px;
-} */
-
 /* Стилі для меню */
-.menu {
+.menu-mobile {
   position: fixed;
   top: 0;
   right: -100%;
@@ -107,8 +85,12 @@
   z-index: 1001;
 }
 
-.menu.active {
+.menu-mobile.active {
   right: 0;
+}
+
+.menu-desktop {
+  display: none;
 }
 
 .menu-header {
@@ -134,11 +116,11 @@
   height: 24px;
 }
 
-/* .menu-close-icon {
-  font-size: 24px;
-} */
-
 /* Стилі для навігації */
+.navigation {
+  display: none;
+  margin: auto;
+}
 
 .navigation,
 .menu-close {
@@ -148,11 +130,6 @@
 .menu.active .navigation,
 .menu.active .menu-close {
   display: block;
-}
-
-.navigation {
-  display: none;
-  margin: auto;
 }
 
 .navigation-list {
@@ -225,6 +202,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
+  display: none;
 }
 
 .menu-overlay.active {
@@ -232,6 +210,7 @@
   visibility: visible;
 }
 
+/* ========================================TAB============================================= */
 /* Медіа-запити */
 @media (min-width: 768px) {
   .header-container {
@@ -242,6 +221,7 @@
 
   .menu-toggle {
     padding: 10px;
+    margin-left: 0;
   }
 
   .menu-toggle-text {
@@ -253,50 +233,57 @@
     display: none;
   }
 
-  .menu {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 200px;
-    height: auto;
-    background: none;
-    /* flex-direction: column; */
-    /* justify-content: flex-start; */
-    padding: 0;
-    transition: all 0.3s ease;
+  .menu-mobile {
     display: none;
   }
 
-  .menu.active {
+  .menu-desktop {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 138px;
+    height: 0;
+    background: none;
+    /* flex-direction: column; */
+    /* justify-content: flex-start; */
+    /* padding: 0; */
+    transition: all 0.3s ease;
+    display: none;
+    z-index: 1001;
+  }
+
+  .menu-desktop.active {
     display: block;
     transform: translateX(-50%);
   }
 
-  .menu-header {
-    display: none;
+  .menu-desktop .menu-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
   }
 
-  .navigation-list {
+  .menu-desktop .navigation-list {
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     margin: 0;
-    padding: 16px 32px;
+    padding: 5px 10px;
   }
 
-  .navigation-item {
+  /* .navigation-item {
     margin: 0 16px;
     text-align: center;
-  }
+  } */
 
-  .navigation-link {
+  .menu-desktop .navigation-link {
     font-size: 16px;
     text-decoration: none;
   }
-
+  /* 
   .navigation-link::after {
     display: none;
-  }
+  } */
 
   .order-button {
     margin-top: 0;
@@ -304,6 +291,10 @@
   }
   .btn-order-container {
     padding: 0;
+  }
+
+  .navigation-link::after {
+    display: none;
   }
 
   .desktop-order-button {
@@ -315,7 +306,7 @@
 }
 
 @media (min-width: 1440px) {
-  .menu {
-    min-width: 200px;
+  .menu-desktop {
+    width: 138px;
   }
 }
