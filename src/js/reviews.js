@@ -77,30 +77,14 @@ const createReviewsMarkup = reviews => {
 
 const setDynamicHeight = () => {
   const slides = document.querySelectorAll('.reviews-card');
-  let maxHeight = 0;
 
-  const observer = new IntersectionObserver(
-    entries => {
-      const visibleSlides = entries.filter(entry => entry.isIntersecting);
+  slides.forEach(slide => (slide.style.height = 'auto'));
 
-      if (visibleSlides.length > 1) {
-        slides.forEach(slide => (slide.style.height = 'auto'));
-
-        maxHeight = Math.max(
-          ...visibleSlides.map(entry => entry.target.offsetHeight)
-        );
-
-        visibleSlides.forEach(entry => {
-          entry.target.style.height = `${maxHeight}px`;
-        });
-      } else {
-        slides.forEach(slide => (slide.style.height = 'auto'));
-      }
-    },
-    { threshold: 0.5 }
+  const maxHeight = Math.max(
+    ...Array.from(slides, slide => slide.offsetHeight)
   );
 
-  slides.forEach(slide => observer.observe(slide));
+  slides.forEach(slide => (slide.style.height = `${maxHeight}px`));
 };
 
 const initReviews = async () => {
@@ -130,8 +114,8 @@ const initReviews = async () => {
     },
 
     breakpoints: {
-      320: { slidesPerView: 1, autoHeight: true },
-      768: { slidesPerView: 2, autoHeight: false },
+      320: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
       1440: { slidesPerView: 4 },
     },
 
