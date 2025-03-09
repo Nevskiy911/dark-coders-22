@@ -1,0 +1,261 @@
+.footer-container {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.footer {
+  padding: 40px 28px 28px;
+  background-color: #0C0C0C;
+  border-radius: 30px;
+  height: auto;
+  color: #FBFBFB;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  font-size: 16px;
+  padding: 10px 10px 10px 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.links-item {
+  height: 34px;
+  width: 34px;
+}
+
+.links-bg {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(251, 251, 251, 0.1);
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links-icon {
+  fill: #FBFBFB;
+  opacity: 0.8;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.links-icon:hover,
+.links-icon:focus {
+  opacity: 1;
+}
+
+.footer-phone {
+  margin-bottom: 40px;
+  max-width: 152px;
+  max-height: 44px;
+  border: 1px solid rgba(251, 251, 251, 0.2);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-phone:hover,
+.footer-phone:focus {
+  background-color: #fbfbfb;
+  color: #0c0c0c;
+}
+
+.mobile-link {
+  font-size: 12px;
+  line-height: 1.33;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: normal;
+  padding: 14px 20px;
+}
+
+.footer-description {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 92px;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  max-width: 147px;
+  height: auto;
+}
+
+.nav-item-link {
+  text-align: center;
+  position: relative;
+  transition: content 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-item-link:hover::after {
+  content: '';
+  position: absolute;
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background-color: #3350e9;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 5px);
+}
+
+.nav-item-link:focus::after {
+  content: '';
+  position: absolute;
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background-color: #3350e9;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 5px);
+}
+
+
+.location {
+  font-style: normal;
+  max-width: 83px;
+  height: auto;
+  transition: text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.location:hover, 
+.location:focus {
+  text-decoration: underline;
+}
+
+.footer-line {
+  width: auto;
+  height: 1px;
+  opacity: 0.1;
+  margin-bottom: 24px;
+}
+
+.rights-and-privacy {
+  font-size: 10px;
+  line-height: 1.4;
+  opacity: 0.5;
+}
+
+.rights {
+  margin-bottom: 8px;
+}
+
+.terms-and-privacy {
+  display: flex;
+  gap: 20px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+
+  .footer {
+    padding: 40px 40px 28px 40px;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 86px;
+  }
+
+  .footer-logo {
+    font-size: 20px;
+  }
+
+  .footer-phone {
+    margin-bottom: 0px;
+    max-width: 160px;
+    max-height: 48px;
+  }
+
+  .mobile-link {
+    font-size: 14px;
+    line-height: 1.29;
+    padding: 15px;
+  }
+
+  .footer-description {
+    font-size: 28px;
+    line-height: 1.14;
+    max-width: 524px;
+    margin: 0 auto 100px;
+  }
+
+  .footer-wrap {
+    margin-bottom: 28px;
+    font-size: 14px;
+    line-height: 1.29;
+  }
+
+  .footer-nav-list {
+    flex-wrap: nowrap;
+    gap: 19px;
+    max-width: 400px;
+  }
+
+  .location {
+    max-width: 162px;
+  }
+
+  .rights-and-privacy {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rights-and-privacy {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+
+}
+
+@media screen and (min-width: 1280px) {
+  .footer-container {
+    padding-top: 50px;
+    padding-bottom: 32px;
+  }
+
+  .footer {
+    position: relative;
+  }
+
+  .footer-description {
+    position: absolute;
+    top: 40px;
+    left: 306px;
+    margin-bottom: 126px;
+  }
+
+  .footer-top {
+    margin-bottom: 126px;
+  }
+}

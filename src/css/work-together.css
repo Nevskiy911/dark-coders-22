@@ -1,0 +1,284 @@
+.work-together-container {
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.backgr-container {
+    position: absolute;
+    z-index: 0;
+    width: 86px;
+    height: 100%;
+    top: 0;
+    right: 0px;
+    background-image: url(../img/work-together/backgr-mob-1x.png);
+}
+
+@media screen and (min-resolution: 192dpi) {
+    .backgr-container {
+        background-image: url(../img/work-together/backgr-mob-2x.png);
+    }
+}
+
+.content {
+    z-index: 1;
+    position: relative;
+}
+
+.work-img {
+    width: 44px;
+    height: 44px;
+    float: left;
+    margin-right: 8px;
+}
+
+.wrapper {
+    margin-bottom: 63px;
+}
+
+.work-title, .work-title-text {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -0.06em;
+    text-transform: uppercase;
+    color: #fafafa;
+}
+
+.work-title {
+    margin-bottom: 8px;
+    padding-top: 3px;
+}
+
+.work-span {
+    color: #c6e327;;
+}
+
+.contact-form {
+    margin-bottom: 64px;
+}
+
+.email-wrapper {
+    margin-bottom: 16px;
+}
+
+.email,
+.form-comment {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    color: #fafafa;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.email {
+    margin-bottom: 4px;
+}
+
+.form-comment {
+    margin-bottom: 32px;
+}
+
+.email::placeholder, .form-comment::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.6);
+}
+
+.email:focus, .form-comment:focus {
+    outline: none;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+}
+
+.form-button {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
+    background-color: #c6e327;
+    color: #fafafa;
+    text-transform: capitalize;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-button:hover, .form-button:focus {
+    background-color: #a6c015;
+}
+
+.email, .form-comment, .form-button {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+}
+
+.address-list {
+    display: flex;
+    gap: 4px;
+}
+
+.address-item {
+    height: 37px;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-item:hover, .address-item:focus {
+    border: 1px solid #fafafa;
+}
+
+.address-link {
+    display: block;
+    font-size: 14px;
+    line-height: 1;
+    font-style: normal;
+    text-align: center;
+    padding: 10px 12px;
+    color: #fafafa;
+}
+
+.phone {
+    letter-spacing: -0.1em;
+}
+
+.success {
+    border-color: #3cbc81 !important;
+}
+
+.error {
+    border-color: #e74a3b !important;
+}
+
+.message {
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.success-text {
+    color: #3cbc81;
+    line-height: 1.28571;
+    display: block;
+}
+
+.error-text {
+    color: #e74a3b;
+    line-height: 1.28571;
+    display: block;
+}
+
+.custom-ok-button {
+    background-color: #1C1D20 !important;
+    color: #fafafa !important;
+}
+
+@media screen and (min-width: 768px){
+    .work-together-container {
+        padding-top: 80px;
+        padding-bottom: 169px;
+    }
+
+    .backgr-container {
+        width: 198px;
+        background-image: url(../img/work-together/backgr-tab-1x.png);
+    }
+    
+    @media screen and (min-resolution: 192dpi) {
+        .backgr-container {
+            background-image: url(../img/work-together/backgr-tab-2x.png);
+        }
+    }
+
+    .wrapper {
+        margin-bottom: 18px;
+    }
+
+    .work-img {
+        width: 70px;
+        height: 70px;
+        margin-right: 20px;
+    }
+
+    .work-title,
+    .work-title-text {
+        font-size: 64px;
+    }
+
+    .work-title {
+        margin-bottom: 10px;
+        padding-top: 4px;
+    }
+
+    .contact-form {
+        display: flex;
+        gap: 32px;
+        align-items: flex-start;
+        margin-bottom: 18px;
+    }
+
+    .email-wrapper {
+        margin-bottom: 0;
+    }
+    
+    .email, .form-comment {
+        width: 245px;
+        padding-top: 46px;
+        margin-bottom: 0;
+    }
+
+    .form-button {
+        width: 150px;
+        height: 150px;
+    }
+
+    .address-list {
+        gap: 8px;
+    }
+    
+    .address-item {
+        height: 55px;
+    }
+
+    .address-link {
+        font-size: 16px;
+        padding: 18px 32px;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .work-together-container {
+        padding-left: 196px;
+        padding-right: 196px;
+    }
+
+    .backgr-container {
+        width: 400px;
+        background-image: url(../img/work-together/backgr-desc-1x.png);
+    }
+    
+    @media screen and (min-resolution: 192dpi) {
+        .backgr-container {
+            background-image: url(../img/work-together/backgr-desc-2x.png);
+        }
+    }
+
+    .email,
+    .form-comment {
+        width: 390px;
+    }
+
+    .form-comment {
+        margin-right: 54px;
+    }
+}

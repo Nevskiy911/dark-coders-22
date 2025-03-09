@@ -1,0 +1,131 @@
+.container-about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.about-wrapper-text {
+    padding: 40px 20px 55px 20px;
+    border-radius: 30px;
+    background: #f3f3f3;
+}
+
+.about-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1;
+    color: #0c0c0c;
+
+    margin-bottom: 28px;
+}
+
+.about-descr p {
+    font-size: 14px;
+    line-height: 1.29;
+    margin-bottom: 20px;
+}
+
+.about-descr p:last-child {
+    margin-bottom: 0px;
+}
+
+.about-descr {
+    margin-bottom: 55px;
+}
+
+.about-link {
+    text-align: center;
+    color: #fbfbfb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.about-wrapper-link {
+    width: 160px;
+    height: 48px;
+    border-radius: 16px;
+    background-color: #3350e9;
+    border: 1px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-wrapper-link:focus, 
+.about-wrapper-link:hover {
+    background-color: #1f3cd4;
+}
+
+
+.about-img {
+    border-radius: 30px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .container-about {
+        gap: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .about-wrapper-text {
+        padding: 80px 60px 95px 60px;
+        border-radius: 50px;
+    }
+
+    .about-title {
+        font-size: 48px;
+        line-height: 0.92;
+
+        margin-bottom: 40px;
+    }
+
+    .about-descr p {
+        font-size: 16px;
+        line-height: 1.25;
+        max-width: 584px;
+    }
+
+    .about-descr {
+        margin-bottom: 75px;
+    }
+
+    .about-img {
+        border-radius: 50px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container-about {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 40px;
+        margin: 0;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .about-wrapper-text {
+        background: #f3f3f3;
+    }
+
+    .about-title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 0.92;
+        letter-spacing: -0.02em;
+        color: #0c0c0c;
+    }
+
+    .about-descr {
+        margin-bottom: 55px;
+    }
+
+    .about-img {
+        border-radius: 50px;
+    }
+
+}

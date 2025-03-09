@@ -1,0 +1,78 @@
+<footer class="work-together" id="work-together">
+  <div class="container work-together-container">
+    <div class="backgr-container"></div>
+    <div class="content">
+      <div class="wrapper">
+        <picture class="image">
+          <source
+            srcset="
+              ./img/work-together/work-together-desc-1x.webp 1x,
+              ./img/work-together/work-together-desc-2x.webp 2x
+            "
+            media="(min-width: 1440px)"
+          />
+          <source
+            srcset="
+              ./img/work-together/work-together-tab-1x.webp 1x,
+              ./img/work-together/work-together-tab-2x.webp 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./img/work-together/work-together-mob-1x.webp 1x,
+              ./img/work-together/work-together-mob-2x.webp 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <img
+            class="work-img"
+            src="./img/work-together/work-together-mob-1x.webp"
+            alt="Developer's photo"
+          />
+        </picture>
+        <h2 class="work-title">
+          Let’s <span class="work-span">work</span
+          ><span class="visually-hidden">together</span>
+        </h2>
+        <p class="work-title-text">together</p>
+      </div>
+      <form class="contact-form">
+        <div class="email-wrapper">
+          <input
+            type="email"
+            name="email"
+            class="email"
+            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+            placeholder="clients@gmail.com"
+            autocomplete="off"
+            required
+          />
+          <p class="message"></p>
+        </div>
+        <input
+          type="text"
+          name="comments"
+          class="form-comment"
+          placeholder="comments"
+          autocomplete="off"
+        />
+        <button class="form-button" type="submit">send</button>
+      </form>
+      <address class="address">
+        <ul class="address-list">
+          <li class="address-item">
+            <a class="address-link" href="mailto:lloydjefferson@gmail.com"
+              >lloydjefferson@gmail.com</a
+            >
+          </li>
+          <li class="address-item">
+            <a class="address-link phone" href="tel:3801111111111"
+              >+380 11 1111 11 11</a
+            >
+          </li>
+        </ul>
+      </address>
+    </div>
+  </div>
+</footer>
