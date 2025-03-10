@@ -13,32 +13,19 @@
 
     <div class="about-image">
       <picture>
-        <source
-          srcset="
+        <source srcset="
             ./img/about-me/image-1x-dex.png 1x,
             ./img/about-me/image-2x-dex.png 2x
-          "
-          media="(min-width:1440px)"
-        />
-        <source
-          srcset="
+          " media="(min-width:1440px)" />
+        <source srcset="
             ./img/about-me/image-1x-lap.png 1x,
             ./img/about-me/image-2x-lap.png 2x
-          "
-          media="(min-width:768px)"
-        />
-        <source
-          srcset="
+          " media="(min-width:768px)" />
+        <source srcset="
             ./img/about-me/image-1x-tel.png 1x,
             ./img/about-me/image-2x-tel.png 2x
-          "
-          media="(max-width:767px)"
-        />
-        <img
-          src="./img/about-me/image-1x-tel.png"
-          alt="Photo of a web developer"
-          class="about-me-img"
-        />
+          " media="(max-width:767px)" />
+        <img src="./img/about-me/image-1x-tel.png" alt="Photo of a web developer" class="about-me-img" />
       </picture>
     </div>
   </div>
@@ -47,7 +34,9 @@
     <li class="accordion-item accordion-item-about active">
       <button class="accordion-header accordion-header-about">
         ABOUT ME
-        <span class="arrow arrow-about"></span>
+        <svg class="about-icon-accordion" width="28" height="28">
+          <use class="about-icon" href="/img/sprite.svg#icon-arrow-down"></use>
+        </svg>
       </button>
       <div class="accordion-content accordion-content-about">
         <p class="text-1">
@@ -75,7 +64,9 @@
     <li class="accordion-item accordion-item-about">
       <button class="accordion-header accordion-header-about">
         ROLE
-        <span class="arrow arrow-about"></span>
+        <svg class="about-icon-accordion" width="28" height="28">
+          <use class="about-icon" href="/img/sprite.svg#icon-arrow-down"></use>
+        </svg>
       </button>
       <div class="accordion-content accordion-content-about">
         <p>Frontend Developer</p>
@@ -86,7 +77,9 @@
     <li class="accordion-item accordion-item-about">
       <button class="accordion-header accordion-header-about">
         EDUCATION
-        <span class="arrow arrow-about"></span>
+        <svg class="about-icon-accordion" width="28" height="28">
+          <use class="about-icon" href="/img/sprite.svg#icon-arrow-down"></use>
+        </svg>
       </button>
       <div class="accordion-content accordion-content-about">
         <p>
@@ -101,8 +94,6 @@
     </li>
   </ul>
 
-  <!-- Переробив свайпер, аккордеон не чіпав -->
-
   <div class="skills">
     <div class="swiper-container-about">
       <div class="swiper swiper-about">
@@ -112,13 +103,14 @@
           <li class="swiper-slide swiper-slide-about">React</li>
           <li class="swiper-slide swiper-slide-about">Node.js</li>
           <li class="swiper-slide swiper-slide-about">React Native</li>
+          <li class="swiper-slide swiper-slide-about">TypeScript</li>
           <li class="swiper-slide swiper-slide-about">Soft Skills</li>
         </ul>
       </div>
     </div>
     <div class="swiper-button-next-about">
       <svg class="about-icon-btn" width="28" height="28">
-        <use class="about-icon" href="../img/sprite.svg#icon-arrow-right"></use>
+        <use class="about-icon" href="/img/sprite.svg#icon-arrow-right"></use>
       </svg>
     </div>
   </div>

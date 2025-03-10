@@ -1,13 +1,12 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Keyboard } from 'swiper/modules';
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 
-// import Accordion from 'accordion-js';
-// import 'accordion-js/dist/accordion.min.css';
-
-new Swiper('.swiper-about', {
+// Инициализация Swiper
+const swiper = new Swiper('.swiper-about', {
   modules: [Navigation, Keyboard],
-
   spaceBetween: 0,
   loop: true,
   observer: true,
@@ -27,37 +26,33 @@ new Swiper('.swiper-about', {
     768: { slidesPerView: 3 },
     1440: { slidesPerView: 6 },
   },
+
   on: {
+    init: updateFirstSlideColor, // Устанавливаем цвет сразу при инициализации
     slideChangeTransitionEnd: updateFirstSlideColor,
   },
 });
 
+// Функция обновления цвета первого видимого слайда
 function updateFirstSlideColor() {
-  requestAnimationFrame(() => {
-    document.querySelectorAll('.swiper-slide-about').forEach(slide => {
-      slide.style.backgroundColor = '';
-    });
-
-    const firstVisibleSlide = document.querySelector('.swiper-slide-active');
-    if (firstVisibleSlide) {
-      firstVisibleSlide.style.backgroundColor = '#c6e327';
-    }
+  document.querySelectorAll('.swiper-slide-about').forEach(slide => {
+    slide.style.backgroundColor = ''; // Сброс цвета
   });
+
+  const firstVisibleSlide = document.querySelector('.swiper-slide-active');
+  if (firstVisibleSlide) {
+    firstVisibleSlide.style.backgroundColor = '#c6e327';
+  }
 }
 
-updateFirstSlideColor();
+// Запускаем Swiper и применяем цвет к первому слайду
+swiper.init();
 
-// ---------------------- Нижче не чіпав -----------------------------
-
-const accordionItems = document.querySelectorAll('.accordion-item');
-
-accordionItems.forEach((item, index) => {
-  const header = item.querySelector('.accordion-header');
-  const content = item.querySelector('.accordion-content');
-  const arrow = header.querySelector('.arrow');
-
-  content.style.overflow = 'hidden';
-  content.style.transition = 'max-height 0.3s ease-in-out';
+// === Аккордеон ===
+document.querySelectorAll('.accordion-item-about').forEach((item, index) => {
+  const header = item.querySelector('.accordion-header-about');
+  const content = item.querySelector('.accordion-content-about');
+  const arrow = header.querySelector('.about-icon-accordion');
 
   if (index === 0) {
     item.classList.add('active');
@@ -65,20 +60,12 @@ accordionItems.forEach((item, index) => {
     arrow.style.transform = 'rotate(180deg)';
   } else {
     content.style.maxHeight = '0';
-    arrow.style.transform = 'rotate(0deg)';
   }
 
   header.addEventListener('click', () => {
-    const isActive = item.classList.contains('active');
+    const isActive = item.classList.toggle('active');
 
-    if (isActive) {
-      item.classList.remove('active');
-      content.style.maxHeight = '0';
-      arrow.style.transform = 'rotate(0deg)';
-    } else {
-      item.classList.add('active');
-      content.style.maxHeight = content.scrollHeight + 'px';
-      arrow.style.transform = 'rotate(180deg)';
-    }
+    content.style.maxHeight = isActive ? content.scrollHeight + 'px' : '0';
+    arrow.style.transform = isActive ? 'rotate(180deg)' : 'rotate(0deg)';
   });
 });

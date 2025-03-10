@@ -1,9 +1,8 @@
-/* Все що сгорнуто не чіпав */
-
 .about {
   padding-top: 64px;
   padding-bottom: 32px;
 }
+
 .about-content {
   margin-bottom: 32px;
 }
@@ -46,6 +45,7 @@
   height: 500px;
 }
 
+/* ========== ACCORDION ========== */
 .accordion-about {
   list-style: none;
   padding: 0;
@@ -79,23 +79,20 @@
   max-height: 0;
   display: none;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease-in-out;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
   color: #fafafa;
   padding-bottom: 20px;
 }
 
-.accordion-item-about.active .accordion-content {
-  display: block;
+.accordion-item-about.active .accordion-content-about {
+  max-height: 500px;
 }
 
-.arrow-about {
+.about-icon-accordion {
   width: 36px;
   height: 36px;
-  background-image: url('data: image/svg+xml, %3Csvg%20height%3D%22800px%22%20width%3D%22800px%22%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%2050%2050%22%20enable-background%3D%22new%200%200%2050%2050%22%20xml%3Aspace%3D%22preserve%22%20transform%3D%22matrix(6.123233995736766e-17%2C1%2C-1%2C6.123233995736766e-17%2C0%2C0)%22%3E%3Cpath%20fill%3D%22%23231F20%22%20d%3D%22M15.563%2C40.836c0.195%2C0.195%2C0.451%2C0.293%2C0.707%2C0.293s0.512-0.098%2C0.707-0.293l15-15c0.391-0.391%2C0.391-1.023%2C0-1.414l-15-15c-0.391-0.391-1.023-0.391-1.414%2C0s-0.391%2C1.023%2C0%2C1.414l14.293%2C14.293L15.563%2C39.422C15.172%2C39.813%2C15.172%2C40.446%2C15.563%2C40.836z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
   background-size: cover;
   transition: transform 0.3s ease;
   border: 1px solid rgba(250, 250, 250, 0.2);
@@ -111,15 +108,18 @@
   transform: rotate(180deg);
 }
 
-/* Стилі для Swiper */
+.accordion-item-about.active .accordion-content {
+  display: block;
+}
 
+/* ========== SWIPER ========== */
 .skills {
   max-width: 343px;
   display: flex;
-
   justify-content: space-between;
   align-items: center;
 }
+
 .swiper-about {
   width: 260px;
   height: 130px;
@@ -136,16 +136,15 @@
   color: white;
   font-weight: 500;
   font-size: 16px;
-  letter-spacing: -0.02em;
   text-align: center;
   padding: 53px 0;
 }
 
+/* ========== MEDIA QUERIES ========== */
 @media (min-width: 768px) {
   .about {
     max-width: 768px;
     padding-bottom: 48px;
-    background-color: #1c1d20;
   }
 
   .about-text {
@@ -157,7 +156,6 @@
   .intro {
     font-size: 38px;
     line-height: 1.05;
-    letter-spacing: -0.03em;
   }
 
   .about-image {
@@ -171,8 +169,6 @@
   .accordion-about {
     margin: 64px 0;
   }
-
-  /* Стилі для Swiper */
 
   .skills {
     max-width: 704px;
@@ -188,11 +184,6 @@
     padding: 88px 0;
   }
 
-  .about-icon-btn {
-    height: 40px;
-    width: 40px;
-  }
-
   .swiper-button-next-about {
     width: 40px;
     height: 40px;
@@ -204,7 +195,10 @@
     max-width: 1440px;
     padding-top: 96px;
     padding-bottom: 82px;
-    background-color: #1c1d20;
+  }
+
+  .text-1 {
+    margin-bottom: 32px;
   }
 
   .about-content {
@@ -229,13 +223,7 @@
     margin-right: 68px;
     width: 612px;
     height: 320px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 10px;
   }
-
-  /* Стилі для Swiper */
 
   .skills {
     max-width: 1376px;
