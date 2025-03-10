@@ -36,6 +36,7 @@
     animation-duration: 20s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
 }
 @media screen and (min-width: 375px) {
@@ -76,6 +77,7 @@
     animation-duration: 20s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
 }
 
@@ -178,6 +180,7 @@
     animation-duration: 20s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
 }
 
