@@ -77,9 +77,10 @@
 
 .accordion-content-about {
   max-height: 0;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   font-weight: 500;
   font-size: 16px;
   color: #fafafa;
@@ -88,7 +89,10 @@
 
 .accordion-item-about.active .accordion-content-about {
   max-height: 500px;
+  opacity: 1;
+  visibility: visible;
 }
+
 
 .about-icon-accordion {
   width: 36px;
