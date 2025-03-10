@@ -75,7 +75,7 @@
   right: -100%;
   width: 100%;
   height: 100vh;
-  background: url('../img/header/bg-mob-x1.png') no-repeat center center;
+  background: url('/img/header/bg-mob-x1.png') no-repeat center center;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -83,6 +83,11 @@
   padding: 20px;
   transition: right 0.3s ease;
   z-index: 1001;
+}
+
+.menu-mobile img {
+  width: 378px;
+  height: 100%;
 }
 
 .menu-mobile.active {
