@@ -15,19 +15,4 @@ new Swiper(".projects-swiper", {
         enabled: true,
     onlyInViewport: true,
     },
-    on: {
-    slideChange: function () {
-      if (Swiper.isEnd) {
-        Swiper.navigation.nextEl.disabled = true;
-      } else {
-        Swiper.navigation.nextEl.disabled = false;
-      }
-
-      if (Swiper.isBeginning) {
-        Swiper.navigation.prevEl.disabled = true;
-      } else {
-        Swiper.navigation.prevEl.disabled = false;
-      }
-    }
-  }
   });
