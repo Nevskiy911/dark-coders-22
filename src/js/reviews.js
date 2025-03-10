@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 
 import axios from 'axios';
 
@@ -11,6 +11,7 @@ const refs = {
   sliderContainer: document.querySelector('.swiper-wrapper-reviews'),
   slider: document.querySelector('.swiper-reviews'),
   reviewsSection: document.querySelector('#reviews'),
+  btnBlock: document.querySelector('.btn-wrapper-reviews'),
 };
 
 const BASE_URL = 'https://portfolio-js.b.goit.study/api';
@@ -29,6 +30,8 @@ const fetchReviews = async () => {
 const renderError = () => {
   refs.sliderContainer.innerHTML = `<li class="swiper-placeholder">Not found</li>`;
   refs.slider.classList.remove('swiper-reviews');
+  refs.btnBlock.classList.add('hidden-btn');
+  refs.reviewsSection.style.paddingBottom = '64px';
 };
 
 const errorToast = () => {
@@ -74,30 +77,14 @@ const createReviewsMarkup = reviews => {
 
 const setDynamicHeight = () => {
   const slides = document.querySelectorAll('.reviews-card');
-  let maxHeight = 0;
 
-  const observer = new IntersectionObserver(
-    entries => {
-      const visibleSlides = entries.filter(entry => entry.isIntersecting);
+  slides.forEach(slide => (slide.style.height = 'auto'));
 
-      if (visibleSlides.length > 1) {
-        slides.forEach(slide => (slide.style.height = 'auto'));
-
-        maxHeight = Math.max(
-          ...visibleSlides.map(entry => entry.target.offsetHeight)
-        );
-
-        visibleSlides.forEach(entry => {
-          entry.target.style.height = `${maxHeight}px`;
-        });
-      } else {
-        slides.forEach(slide => (slide.style.height = 'auto'));
-      }
-    },
-    { threshold: 0.5 }
+  const maxHeight = Math.max(
+    ...Array.from(slides, slide => slide.offsetHeight)
   );
 
-  slides.forEach(slide => observer.observe(slide));
+  slides.forEach(slide => (slide.style.height = `${maxHeight}px`));
 };
 
 const initReviews = async () => {
@@ -110,7 +97,7 @@ const initReviews = async () => {
   refs.sliderContainer.innerHTML = createReviewsMarkup(reviews);
 
   new Swiper('.swiper-reviews', {
-    modules: [Navigation, Keyboard, Mousewheel],
+    modules: [Navigation, Keyboard],
     slidesPerView: 1,
     spaceBetween: 16,
     speed: 500,
@@ -126,13 +113,9 @@ const initReviews = async () => {
       onlyInViewport: true,
     },
 
-    mousewheel: {
-      sensitivity: 1,
-    },
-
     breakpoints: {
-      320: { slidesPerView: 1, autoHeight: true },
-      768: { slidesPerView: 2, autoHeight: false },
+      320: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
       1440: { slidesPerView: 4 },
     },
 
