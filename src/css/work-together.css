@@ -28,11 +28,13 @@
 .work-img {
     width: 44px;
     height: 44px;
-    float: left;
-    margin-right: 8px;
 }
 
 .wrapper {
+    display: flex;
+    gap: 4px 8px;
+    flex-wrap: wrap;
+    align-items: center;
     margin-bottom: 63px;
 }
 
@@ -41,14 +43,9 @@
     font-weight: 500;
     font-size: 40px;
     line-height: 1;
-    letter-spacing: -0.06em;
+    letter-spacing: -0.07em;
     text-transform: uppercase;
     color: #fafafa;
-}
-
-.work-title {
-    margin-bottom: 8px;
-    padding-top: 3px;
 }
 
 .work-span {
@@ -201,23 +198,18 @@
     }
 
     .wrapper {
+        gap: 7px 20px;
         margin-bottom: 18px;
     }
 
     .work-img {
         width: 70px;
         height: 70px;
-        margin-right: 20px;
     }
 
     .work-title,
     .work-title-text {
         font-size: 64px;
-    }
-
-    .work-title {
-        margin-bottom: 10px;
-        padding-top: 4px;
     }
 
     .contact-form {
@@ -271,6 +263,10 @@
         .backgr-container {
             background-image: url(../img/work-together/backgr-desc-2x.png);
         }
+    }
+
+    .wrapper {
+        max-width: 542px;
     }
 
     .email,
