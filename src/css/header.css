@@ -222,6 +222,7 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 16px 32px;
+    margin: 0;
   }
 
   .menu-toggle {
