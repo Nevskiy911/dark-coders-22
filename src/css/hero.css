@@ -29,7 +29,6 @@
 .hero-social-link {
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
-  padding: 10px;
   width: 37px;
   height: 37px;
   font-weight: 500;
@@ -38,8 +37,12 @@
   color: #fafafa;
 }
 
-.it-link {
+.ig-link {
   padding: 10px 12px;
+}
+
+.fb-link {
+  padding: 10px;
 }
 
 .yt-link {
@@ -50,7 +53,10 @@
   padding: 10px 8px;
 }
 
-/* ---------------------------- */
+.social-media-list .hero-social:last-child .hero-social-link {
+  padding: 10px 12px;
+}
+
 .hero-social-link:hover,
 .hero-social-link:focus {
   border-color: #fafafa;
@@ -82,11 +88,24 @@
 
   .hero-social-link {
     border-radius: 60px;
-    padding: 18px;
+    /* padding: 18px; */
     width: 55px;
     height: 55px;
     font-size: 16px;
   }
+
+  .ig-link {
+    padding: 18px 20px;
+  }
+
+  .fb-link {
+    padding: 18px 17px;
+  }
+
+  .yt-link {
+    padding: 18px;
+  }
+
 
   .gh-link {
     padding: 18px 16px;
