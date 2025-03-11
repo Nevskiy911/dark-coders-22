@@ -76,9 +76,7 @@
 }
 
 .reviews-btn-prev:hover,
-.reviews-btn-prev:focus,
-.reviews-btn-next:hover,
-.reviews-btn-next:focus {
+.reviews-btn-next:hover {
   border-color: #fafafa;
 
   .reviews-icon-btn {
