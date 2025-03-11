@@ -1,49 +1,41 @@
-const titleModal = document.querySelector('.title-modal');
-const textModal = document.querySelector('.text-modal');
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("modal");
+  const closeModal = document.getElementById("closeBtn");
+  const form = document.querySelector(".contact-form");
 
-export function openModal(modalId) {
-  const modal = document.getElementById(modalId);
-
-  if (!modal) {
-    iziToast.error({
-      title: 'Modal not found:',
-      message: modalId,
-      position: 'center',
-      timeout: 10000,
-    });
-
-    return;
+  function openModal() {
+    modal.style.display = "flex";
   }
 
-  modal.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-
-  document.addEventListener('keydown', handleKeydown);
-  document.addEventListener('click', handleBackdropClik);
-}
-
-function closeModal() {
-  const modal = document.getElementById('footer-modal');
-
-  if (modal) {
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
-
-    document.removeEventListener('keydown', handleKeydown);
-    document.removeEventListener('click', handleBackdropClik);
+  function closeModalFunc() {
+    modal.style.display = "none";
   }
-}
 
-function handleKeydown(event) {
-  if (event.key === 'Escape') {
-    closeModal();
-  }
-}
+  closeModal.addEventListener("click", closeModalFunc);
 
-function handleBackdropClik(event) {
-  if (event.target.id === 'footer-modal') {
-    closeModal();
-  }
-}
+  window.addEventListener("click", event => {
+    if (event.target === modal) {
+      closeModalFunc();
+    }
+  });
 
-document.getElementById('close-btn').addEventListener('click', closeModal);
+  form.addEventListener("submit", async evt => {
+    evt.preventDefault();
+    const userEmail = form.elements.email.value.trim();
+    const userComment = form.elements.comments.value.trim();
+
+    async function postRequest(email, comment) {
+      return new Promise(resolve => {
+        setTimeout(() => resolve({ status: 201 }), 1000);
+      });
+    }
+
+    const response = await postRequest(userEmail, userComment);
+    if (response.status === 201) {
+      openModal();
+      form.reset();
+    } else {
+      alert("Submission failed. Please try again.");
+    }
+  });
+});
