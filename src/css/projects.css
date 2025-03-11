@@ -27,6 +27,7 @@
   gap: 6px;
   margin-bottom: 96px;
   max-width: 279px;
+  max-height: 96px;
 }
 
 .projects-slide-info-tech-item {
@@ -34,7 +35,6 @@
   border: 1px solid rgba(28, 29, 32, 0.2);
   border-radius: 60px;
   padding: 13px 18px;
-  min-height: 45px;
 }
 
 .projects-slide-info-subtitle {
@@ -54,11 +54,14 @@
   text-align: center;
   display: inline-block;
   white-space: nowrap;
+  width: 141px;
+  height: 45px;
 }
 
 .projects-wrapper-link {
   width: 141px;
   height: 45px;
+  display: inline-flex;
   border-radius: 60px;
   background-color: #c6e327;
   border: none;
@@ -149,12 +152,13 @@
   .projects-slide-info-tech-list {
     flex-wrap: nowrap;
     margin-bottom: 96px;
-    max-width: 164px;
+    max-width: 312px;
+    max-height: 55px;
   }
 
   .projects-slide-info-tech-item {
     padding: 18px;
-    min-height: 55px;
+    white-space: nowrap;
   }
 
   .projects-slide-info-subtitle {
@@ -166,11 +170,11 @@
 
   .projects-link {
     padding: 18px 50px;
+    width: 177px;
+    height: 55px;
   }
 
   .projects-wrapper-link {
-    width: 177px;
-    height: 55px;
     max-width: 100%;
   }
 
@@ -223,6 +227,7 @@
   .projects-slide-info-tech-list {
     margin-bottom: 223px;
     max-width: 312px;
+    max-height: 55px;
   }
 
   .projects-slide-img {
