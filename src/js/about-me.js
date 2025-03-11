@@ -49,11 +49,10 @@ function updateFirstSlideColor() {
 swiper.init();
 
 // === Аккордеон ===
-document.querySelectorAll('.accordion-item-about').forEach((item, index) => {
+document.querySelectorAll('.accordion-item-about').forEach((item, index, allItems) => {
   const header = item.querySelector('.accordion-header-about');
   const content = item.querySelector('.accordion-content-about');
   const arrow = header.querySelector('.about-icon-accordion');
-
 
   if (index === 0) {
     item.classList.add('active');
@@ -69,6 +68,21 @@ document.querySelectorAll('.accordion-item-about').forEach((item, index) => {
 
   header.addEventListener('click', () => {
     const isActive = item.classList.contains('active');
+
+    allItems.forEach((otherItem) => {
+      if (otherItem !== item && otherItem.classList.contains('active')) {
+        const otherContent = otherItem.querySelector('.accordion-content-about');
+        const otherArrow = otherItem.querySelector('.about-icon-accordion');
+
+        otherItem.classList.remove('active');
+        otherContent.style.maxHeight = '0';
+        otherContent.style.opacity = '0';
+        setTimeout(() => {
+          otherContent.style.visibility = 'hidden';
+        }, 300);
+        otherArrow.style.transform = 'rotate(0deg)';
+      }
+    });
 
     if (isActive) {
       item.classList.remove('active');
