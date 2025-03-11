@@ -28,7 +28,7 @@ form.addEventListener('submit', async (evt) => {
             title: "Sorry, an error occurred",
             text: "Please, correct the data and try again!",
             color: "#fafafa",
-            background: "#a6c015",
+            background: "#636061",
             width: "300px",
             timer: 4000,
             timerProgressBar: true,
