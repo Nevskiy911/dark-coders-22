@@ -100,7 +100,15 @@
   letter-spacing: -0.02em;
 }
 
-.accordion-item-about.active .accordion-content-about {
+.accordion-content-about>*:first-child {
+  margin-bottom: 10px;
+}
+
+.accordion-content-about>*:nth-child(2) {
+  margin-bottom: 10px;
+}
+
+.accordion-content-about .accordion-item-about.active .accordion-content-about {
   max-height: 500px;
   opacity: 1;
   visibility: visible;
