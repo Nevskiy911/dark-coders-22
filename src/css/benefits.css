@@ -39,10 +39,7 @@
 }
 
 .benefits-icon {
-    width: 24px;
-    height: 24px;
-    fill: none;
-    stroke: #FAFAFA;
+    fill: #FAFAFA;
 }
 
 .benefits-subtitle {
