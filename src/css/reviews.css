@@ -52,21 +52,36 @@
   gap: 12px;
 }
 
-.swiper-button-reviews-prev,
-.swiper-button-reviews-next {
-  border: 1px solid rgba(250, 250, 250, 0.4);
+.reviews-btn-prev,
+.reviews-btn-next {
+  border: 1px solid rgba(250, 250, 250, 0.6);
   border-radius: 60px;
   padding: 14px;
   width: 52px;
   height: 52px;
   background-color: #1c1d20;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.swiper-button-reviews-prev.swiper-button-disabled,
-.swiper-button-reviews-next.swiper-button-disabled {
-  opacity: 0.35;
+.reviews-btn-prev.swiper-button-disabled,
+.reviews-btn-next.swiper-button-disabled {
+  opacity: 0.25;
   cursor: auto;
   pointer-events: none;
+}
+
+.reviews-icon-btn {
+  stroke: rgba(250, 250, 250, 0.6);
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reviews-btn-prev:hover,
+.reviews-btn-next:hover {
+  border-color: #fafafa;
+
+  .reviews-icon-btn {
+    stroke: #fafafa;
+  }
 }
 
 .hidden-btn {
@@ -82,8 +97,8 @@
     gap: 20px;
   }
 
-  .swiper-button-reviews-prev,
-  .swiper-button-reviews-next {
+  .reviews-btn-prev,
+  .reviews-btn-next {
     padding: 18px;
     width: 68px;
     height: 68px;

@@ -39,7 +39,7 @@ const errorToast = () => {
     title: 'Error',
     message: `Failed to fetch reviews. Please try again later.`,
     position: 'bottomRight',
-    timeout: 3000,
+    timeout: 4000,
   });
 };
 
@@ -104,8 +104,8 @@ const initReviews = async () => {
     grabCursor: true,
 
     navigation: {
-      nextEl: '.swiper-button-reviews-next',
-      prevEl: '.swiper-button-reviews-prev',
+      nextEl: '.reviews-btn-next',
+      prevEl: '.reviews-btn-prev',
     },
 
     keyboard: {
