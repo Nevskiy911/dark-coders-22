@@ -28,16 +28,16 @@
 }
 
 .icon-wrapper {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    padding: 12px;
     width: 48px;
     height: 48px;
     background-color: #C6E327;
     border-radius: 10px;
     margin-bottom: 64px;
 }
-
 .benefits-icon {
     stroke: #FAFAFA;
 }
