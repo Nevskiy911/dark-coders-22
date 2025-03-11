@@ -1,6 +1,6 @@
 import axios from "axios";
 import Swal from 'sweetalert2';
-// import { openModal } from "./modal-work-tog";
+import { openModal } from "./modal-work-tog";
 
 const refs = {
     form: document.querySelector('.contact-form'),
@@ -20,7 +20,7 @@ form.addEventListener('submit', async (evt) => {
     const userComment = form.elements.comments.value.trim();
     const response = await postRequest(userEmail, userComment);
     if (response.status === 201) {
-        // openModal(response.data);
+        openModal(response.data);
         form.reset();
         resetValidation();
     } else {
@@ -28,12 +28,13 @@ form.addEventListener('submit', async (evt) => {
             title: "Sorry, an error occurred",
             text: "Please, correct the data and try again!",
             color: "#fafafa",
-            background: "#c6e327",
+            background: "#636061",
             width: "300px",
             timer: 4000,
             timerProgressBar: true,
             customClass: {
-                confirmButton: "custom-ok-button"
+                confirmButton: "custom-ok-button",
+                popup: "custom-swal"
             }
         });
     }
