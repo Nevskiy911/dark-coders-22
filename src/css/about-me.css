@@ -88,7 +88,7 @@
 }
 
 .accordion-content-about {
-  max-height: 0;
+  max-height: 700px;
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
