@@ -31,10 +31,13 @@
   color: #fafafa;
 }
 
+.social-media {
+  padding-bottom: 42px;
+}
+
 .social-media-list {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 32px;
 }
 
 .hero-social-link {
@@ -95,11 +98,14 @@
     font-size: 90px;
   }
 
+  .social-media {
+    padding-bottom: 50px;
+  }
+
   .social-media-list {
     display: flex;
     justify-content: end;
     gap: 8px;
-    padding-bottom: 32px;
   }
 
   .hero-social-link {
