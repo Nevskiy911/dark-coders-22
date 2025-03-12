@@ -3,18 +3,27 @@
     <div class="header-container">
       <a href="#" class="logo">
         <div class="logo-image">
-          <img src="img/header/logo-header-mobile-1x.png" alt="Jefferson*" />
+          <img
+            src="img/header/logo-header-1x.webp"
+            srcset="
+              img/header/logo-header-1x.webp 1x,
+              img/header/logo-header-2x.webp 2x
+            "
+            alt="man with a beard and glasses"
+          />
         </div>
         <span class="logo-text">jefferson*</span>
       </a>
 
-      <button class="menu-toggle" aria-label="Відкрити меню">
+      <button
+        class="menu-toggle"
+        aria-label="Відкрити меню"
+        aria-expanded="false"
+      >
         <span class="menu-toggle-text">Menu</span>
-        <img
-          class="menu-toggle-img"
-          src="img/header/menu-open-btn.svg"
-          alt="Menu Icon"
-        />
+        <svg class="menu-toggle-btn" width="28" height="28">
+          <use class="menu-open-icon" href="../img/sprite.svg#icon-menu"></use>
+        </svg>
       </button>
       <div class="btn-order-container">
         <a href="#work-together" class="order-button desktop-order-button"
@@ -27,7 +36,12 @@
         <div class="menu-header">
           <span class="menu-title"></span>
           <button class="menu-close" aria-label="Close Menu">
-            <img src="img/header/menu-close.svg" alt="Menu Close Icon" />
+            <svg class="menu-close-btn" width="28" height="28">
+              <use
+                class="menu-close-icon"
+                href="../img/sprite.svg#icon-x"
+              ></use>
+            </svg>
           </button>
         </div>
 
