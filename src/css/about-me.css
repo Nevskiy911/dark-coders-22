@@ -3,10 +3,6 @@
   padding-bottom: 32px;
 }
 
-.text-1 {
-  margin-bottom: 32px;
-}
-
 .about-content {
   margin-bottom: 32px;
 }
@@ -80,9 +76,13 @@
 .ac-panel-about {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 8px;
   margin-bottom: 20px;
   overflow: hidden;
+}
+
+.ac-panel-about.ac-panel-about-me {
+  gap: 32px;
 }
 
 .ac-text-about {
@@ -141,6 +141,9 @@
 
 /* ========== MEDIA QUERIES ========== */
 @media (min-width: 768px) {
+  .about {
+    padding-bottom: 48px;
+  }
   .intro {
     font-size: 38px;
     line-height: 1.05;
@@ -152,7 +155,7 @@
     height: 700px;
   }
 
-  .about-image {
+  .about-content {
     margin-bottom: 64px;
   }
 
@@ -175,8 +178,11 @@
   }
 
   .ac-panel-about {
-    gap: 16px;
     margin-bottom: 32px;
+  }
+
+  .ac-panel-about.ac-panel-about-me {
+    gap: 16px;
   }
 
   /* Кнопка */
@@ -216,6 +222,11 @@
     margin-bottom: 96px;
   }
 
+  .about-text {
+    max-width: 680px;
+    margin-bottom: 0;
+  }
+
   .about-image {
     margin-bottom: 0;
   }
@@ -227,8 +238,11 @@
   }
 
   .ac-panel-about {
-    gap: 32px;
     padding-left: 50%;
+  }
+
+  .ac-panel-about.ac-panel-about-me {
+    gap: 32px;
   }
 
   .ac-text-about {
