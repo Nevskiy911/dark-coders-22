@@ -27,10 +27,13 @@
   gap: 6px;
   margin-bottom: 96px;
   max-width: 279px;
-  max-height: 96px;
 }
 
 .projects-slide-info-tech-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   color: #1c1d20;
   border: 1px solid rgba(28, 29, 32, 0.2);
   border-radius: 60px;
@@ -47,12 +50,12 @@
 }
 
 .projects-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: #fafafa;
-  display: flex;
   padding: 13px 32px;
-  text-align: center;
-  display: inline-block;
   white-space: nowrap;
   width: 141px;
   height: 45px;
@@ -61,13 +64,12 @@
 .projects-wrapper-link {
   width: 141px;
   height: 45px;
-  display: inline-flex;
-  border-radius: 60px;
-  background-color: #c6e327;
-  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 60px;
+  background-color: #c6e327;
+  border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
