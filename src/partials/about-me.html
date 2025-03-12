@@ -1,45 +1,69 @@
-<section class="about container">
+<section class="about container" id="about">
   <h2 class="visually-hidden">About Me</h2>
 
   <div class="about-content">
     <div class="about-text">
       <p class="intro">
-        I WORK WITH PEOPLE ALL OVER THE WORLD TO CREATE IMPRESSIVE AND
-        <span class="highlight">FUNCTIONAL</span>
-        <span class="highlight-2">WEBSITES</span>
-        THAT REFLECT EACH CLIENT'S UNIQUE PERSONALITY.
+        I work with people all over the world to create impressive and
+        <span class="highlight">functional</span>
+        <span class="highlight-2">websites</span>
+        that reflect each client's unique personality.
       </p>
     </div>
 
     <div class="about-image">
       <picture>
-        <source srcset="
-            ./img/about-me/image-1x-dex.png 1x,
-            ./img/about-me/image-2x-dex.png 2x
-          " media="(min-width:1440px)" />
-        <source srcset="
-            ./img/about-me/image-1x-lap.png 1x,
-            ./img/about-me/image-2x-lap.png 2x
-          " media="(min-width:768px)" />
-        <source srcset="
-            ./img/about-me/image-1x-tel.png 1x,
-            ./img/about-me/image-2x-tel.png 2x
-          " media="(max-width:767px)" />
-        <img src="./img/about-me/image-1x-tel.png" alt="Photo of a web developer" class="about-me-img" />
+        <source
+          srcset="
+            ./img/about-me/image-1x-dex.webp 1x,
+            ./img/about-me/image-2x-dex.webp 2x
+          "
+          media="(min-width:1440px)"
+        />
+        <source
+          srcset="
+            ./img/about-me/image-1x-lap.webp 1x,
+            ./img/about-me/image-2x-lap.webp 2x
+          "
+          media="(min-width:768px)"
+        />
+        <source
+          srcset="
+            ./img/about-me/image-1x-tel.webp 1x,
+            ./img/about-me/image-2x-tel.webp 2x
+          "
+          media="(max-width:767px)"
+        />
+        <img
+          src="./img/about-me/image-1x-tel.webp"
+          alt="Photo of a web developer"
+          class="about-me-img"
+        />
       </picture>
     </div>
   </div>
 
-  <ul class="accordion accordion-about">
-    <li class="accordion-item accordion-item-about active">
-      <button class="accordion-header accordion-header-about">
-        ABOUT ME
-        <svg class="about-icon-accordion" width="28" height="28">
-          <use class="about-icon" href="/img/sprite.svg#icon-arrow-down"></use>
-        </svg>
-      </button>
-      <div class="accordion-content accordion-content-about">
-        <p class="text-1">
+  <ul class="accordion-container accordion-about">
+    <li class="ac ac-about">
+      <div class="ac-header ac-header-about">
+        <div class="ac-trigger ac-trigger-wrapper">
+          <h3 class="header-about">About me</h3>
+          <button
+            type="button"
+            class="btn-about"
+            aria-label="open and close button"
+          >
+            <svg class="about-icon-accordion" width="18" height="18">
+              <use
+                class="about-icon"
+                href="/img/sprite.svg#icon-arrow-down"
+              ></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="ac-panel ac-panel-about ac-panel-about-me">
+        <p class="ac-text-about">
           I am Lloyd Jefferson, a talented programmer with extensive expertise
           in software development. I have an understanding of different
           programming languages and technologies, always ready to improve my
@@ -48,7 +72,7 @@
           skills and am able to effectively solve even the most difficult tasks
           encountered on the way.
         </p>
-        <p>
+        <p class="ac-text-about">
           Able to work both independently and in a team. I can effectively
           cooperate with colleagues, exchanging ideas and finding optimal
           solutions. Professional maturity allows you to calmly cope with
@@ -61,38 +85,67 @@
         </p>
       </div>
     </li>
-    <li class="accordion-item accordion-item-about">
-      <button class="accordion-header accordion-header-about">
-        ROLE
-        <svg class="about-icon-accordion" width="28" height="28">
-          <use class="about-icon" href="/img/sprite.svg#icon-arrow-down"></use>
-        </svg>
-      </button>
-      <div class="accordion-content accordion-content-about">
-        <p>Frontend Developer</p>
-        <p>HeadlessCMS,Wordpress</p>
-        <p>Blender(enjoy)</p>
+
+    <li class="ac ac-about">
+      <div class="ac-header ac-header-about">
+        <div class="ac-trigger ac-trigger-wrapper">
+          <h3 class="header-about">Role</h3>
+          <button
+            type="button"
+            class="btn-about"
+            aria-label="open and close button"
+          >
+            <svg class="about-icon-accordion" width="18" height="18">
+              <use
+                class="about-icon"
+                href="/img/sprite.svg#icon-arrow-down"
+              ></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="ac-panel ac-panel-about">
+        <p class="ac-text-about">Frontend Developer <br /></p>
+        <p class="ac-text-about">HeadlessCMS,Wordpress</p>
+        <p class="ac-text-about">Blender(enjoy)</p>
       </div>
     </li>
-    <li class="accordion-item accordion-item-about">
-      <button class="accordion-header accordion-header-about">
-        EDUCATION
-        <svg class="about-icon-accordion" width="28" height="28">
-          <use class="about-icon" href="/img/sprite.svg#icon-arrow-down"></use>
-        </svg>
-      </button>
-      <div class="accordion-content accordion-content-about">
-        <p>
-          2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York
+
+    <li class="ac ac-about">
+      <div class="ac-header ac-header-about">
+        <div class="ac-trigger ac-trigger-wrapper">
+          <h3 class="header-about">Education</h3>
+          <button
+            type="button"
+            class="btn-about"
+            aria-label="open and close button"
+          >
+            <svg class="about-icon-accordion" width="18" height="18">
+              <use
+                class="about-icon"
+                href="/img/sprite.svg#icon-arrow-down"
+              ></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="ac-panel ac-panel-about">
+        <p class="ac-text-about">
+          2018 - 2019 / Frontend Development Diploma, GoIT IT <br />
+          School, New York
         </p>
-        <p>
-          2019 - 2020 / Advanced Web Development Certificate, GoIT IT School,
-          New York
+        <p class="ac-text-about">
+          2019 - 2020 / Advanced Web Development Certificate, GoIT IT <br />
+          School, New York
         </p>
-        <p>2020 - 2022 / Advanced Blender Animation Techniques, Udemy</p>
+        <p class="ac-text-about">
+          2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+        </p>
       </div>
     </li>
   </ul>
+
+  <!-- Swiper -->
 
   <div class="skills">
     <div class="swiper-container-about">
@@ -108,10 +161,10 @@
         </ul>
       </div>
     </div>
-    <div class="swiper-button-next-about">
+    <button type="button" class="swiper-button-next-about" aria-label="next slide">
       <svg class="about-icon-btn" width="28" height="28">
         <use class="about-icon" href="/img/sprite.svg#icon-arrow-right"></use>
       </svg>
-    </div>
+    </b>
   </div>
 </section>
