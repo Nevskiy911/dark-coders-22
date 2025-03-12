@@ -94,12 +94,12 @@
     order: 5;
   }
 
-  /* .faq-list-item:nth-child(odd) {
-    border-right: 1px solid rgba(250, 250, 250, 0.2); 
+  .faq-list-item:nth-child(odd) {
+    border-right: 1px solid rgba(250, 250, 250, 0.2);
   }
   .faq-list-item:nth-child(even) {
     border-right: none;
-  } */
+  }
 
   /* Останній елемент не має лінії між стовпцями */
   /* .faq-list-item:last-child {

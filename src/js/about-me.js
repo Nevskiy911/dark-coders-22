@@ -28,15 +28,15 @@ const swiper = new Swiper('.swiper-about', {
   },
 
   on: {
-    init: updateFirstSlideColor, // Устанавливаем цвет сразу при инициализации
+    init: updateFirstSlideColor,
     slideChangeTransitionEnd: updateFirstSlideColor,
   },
 });
 
-// Функция обновления цвета первого видимого слайда
+
 function updateFirstSlideColor() {
   document.querySelectorAll('.swiper-slide-about').forEach(slide => {
-    slide.style.backgroundColor = ''; // Сброс цвета
+    slide.style.backgroundColor = '';
   });
 
   const firstVisibleSlide = document.querySelector('.swiper-slide-active');
@@ -45,11 +45,11 @@ function updateFirstSlideColor() {
   }
 }
 
-// Запускаем Swiper и применяем цвет к первому слайду
+
 swiper.init();
 
 // === Аккордеон ===
-document.querySelectorAll('.accordion-item-about').forEach((item, index) => {
+document.querySelectorAll('.accordion-item-about').forEach((item, index, allItems) => {
   const header = item.querySelector('.accordion-header-about');
   const content = item.querySelector('.accordion-content-about');
   const arrow = header.querySelector('.about-icon-accordion');
@@ -57,15 +57,47 @@ document.querySelectorAll('.accordion-item-about').forEach((item, index) => {
   if (index === 0) {
     item.classList.add('active');
     content.style.maxHeight = content.scrollHeight + 'px';
+    content.style.opacity = '1';
+    content.style.visibility = 'visible';
     arrow.style.transform = 'rotate(180deg)';
   } else {
     content.style.maxHeight = '0';
+    content.style.opacity = '0';
+    content.style.visibility = 'hidden';
   }
 
   header.addEventListener('click', () => {
-    const isActive = item.classList.toggle('active');
+    const isActive = item.classList.contains('active');
 
-    content.style.maxHeight = isActive ? content.scrollHeight + 'px' : '0';
-    arrow.style.transform = isActive ? 'rotate(180deg)' : 'rotate(0deg)';
+    allItems.forEach((otherItem) => {
+      if (otherItem !== item && otherItem.classList.contains('active')) {
+        const otherContent = otherItem.querySelector('.accordion-content-about');
+        const otherArrow = otherItem.querySelector('.about-icon-accordion');
+
+        otherItem.classList.remove('active');
+        otherContent.style.maxHeight = '0';
+        otherContent.style.opacity = '0';
+        setTimeout(() => {
+          otherContent.style.visibility = 'hidden';
+        }, 300);
+        otherArrow.style.transform = 'rotate(0deg)';
+      }
+    });
+
+    if (isActive) {
+      item.classList.remove('active');
+      content.style.maxHeight = '0';
+      content.style.opacity = '0';
+      setTimeout(() => {
+        content.style.visibility = 'hidden';
+      }, 300);
+      arrow.style.transform = 'rotate(0deg)';
+    } else {
+      item.classList.add('active');
+      content.style.maxHeight = content.scrollHeight + 'px';
+      content.style.opacity = '1';
+      content.style.visibility = 'visible';
+      arrow.style.transform = 'rotate(180deg)';
+    }
   });
 });

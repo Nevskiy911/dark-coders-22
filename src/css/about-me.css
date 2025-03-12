@@ -3,6 +3,18 @@
   padding-bottom: 32px;
 }
 
+.about-icon {
+  stroke: #fafafa;
+}
+
+.about-icon-btn {
+  stroke: rgba(250, 250, 250, 0.4);
+}
+
+.text-1 {
+  margin-bottom: 32px;
+}
+
 .about-content {
   margin-bottom: 32px;
 }
@@ -20,7 +32,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 1.16;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
 }
@@ -30,7 +42,7 @@
 }
 
 .highlight-2 {
-  color: #3b3b3b;
+  color: rgba(250, 250, 250, 0.4);
 }
 
 .about-image {
@@ -76,19 +88,32 @@
 }
 
 .accordion-content-about {
-  max-height: 0;
-  display: none;
+  max-height: 700px;
+  opacity: 0;
+  visibility: hidden;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   font-weight: 500;
   font-size: 16px;
   color: #fafafa;
   padding-bottom: 20px;
+  letter-spacing: -0.02em;
 }
 
-.accordion-item-about.active .accordion-content-about {
-  max-height: 500px;
+.accordion-content-about>*:first-child {
+  margin-bottom: 10px;
 }
+
+.accordion-content-about>*:nth-child(2) {
+  margin-bottom: 10px;
+}
+
+.accordion-content-about .accordion-item-about.active .accordion-content-about {
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+}
+
 
 .about-icon-accordion {
   width: 36px;
@@ -145,6 +170,10 @@
   .about {
     max-width: 768px;
     padding-bottom: 48px;
+  }
+
+  .text-1 {
+    margin-bottom: 16px;
   }
 
   .about-text {
@@ -217,12 +246,14 @@
     margin: 96px 0;
   }
 
+
   .accordion-content-about {
     padding-bottom: 32px;
     margin-left: 696px;
     margin-right: 68px;
     width: 612px;
     height: 320px;
+    margin-bottom: 32px;
   }
 
   .skills {
