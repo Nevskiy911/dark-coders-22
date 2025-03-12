@@ -62,10 +62,15 @@
   display: none;
 }
 
-.menu-toggle-img {
+.menu-toggle-btn {
+  stroke: rgba(250, 250, 250, 0.4);
   display: block;
   width: 28px;
   height: 28px;
+}
+
+.menu-open-icon {
+  stroke: #fafafa;
 }
 
 /* Стилі для меню */
@@ -75,7 +80,7 @@
   right: -100%;
   width: 100%;
   height: 100vh;
-  background: url('/img/header/bg-mob-x1.png') no-repeat center center;
+  background: url(/img/header/bg-mob-x1.png) no-repeat center center;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -85,13 +90,22 @@
   z-index: 1001;
 }
 
-.menu-mobile img {
+@media screen and (min-resolution: 2dppx),
+  (min-resolution: 192dpi),
+  (-webkit-min-device-pixel-ratio: 2) {
+  .menu-mobile {
+    background-image: url(/img/header/bg-mob-x2.png);
+  }
+}
+
+/* .menu-mobile img {
   width: 378px;
   height: 100%;
-}
+} */
 
 .menu-mobile.active {
   right: 0;
+  max-width: 378px;
 }
 
 .menu-desktop {
@@ -117,9 +131,12 @@
   cursor: pointer;
 }
 
-.menu-close img {
-  width: 24px;
-  height: 24px;
+.menu-close-btn {
+  stroke: rgba(250, 250, 250, 0.4);
+}
+
+.menu-close-icon {
+  stroke: #fafafa;
 }
 
 /* Стилі для навігації */
@@ -240,7 +257,7 @@
     text-decoration: underline;
   }
 
-  .menu-toggle-img {
+  .menu-toggle-btn {
     display: none;
   }
 
@@ -293,6 +310,11 @@
   .menu-desktop .navigation-link {
     font-size: 16px;
     text-decoration: none;
+  }
+
+  .menu-desktop .navigation-link:hover,
+  .menu-desktop .navigation-link:focus {
+    text-decoration: underline;
   }
   /* 
   .navigation-link::after {
