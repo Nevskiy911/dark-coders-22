@@ -19,8 +19,8 @@
         </symbol>
 
         <!-- Стрілка до низу -->
-        <symbol id="icon-arrow-down" fill="none" viewBox="0 0 32 32">
-            <path d="M15 7.5L10 12.5L5 7.5" stroke-width="2"></path>
+        <symbol id="icon-arrow-down" fill="none" viewBox="0 0 18 18">
+            <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke-width="2"></path>
         </symbol>
 
         <!-- Кисть -->
