@@ -1,15 +1,15 @@
 @font-face {
     font-family: 'Inter Tight';
-    src: url('fonts/InterTight-Medium.ttf') format('truetype');
+    src: url('InterTight-Medium.ttf') format('truetype');
     font-weight: 500;
-    /* значення для Medium */
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Inter Tight';
-    src: url('fonts/InterTight-SemiBold.ttf') format('truetype');
+    src: url('InterTight-SemiBold.ttf') format('truetype');
     font-weight: 600;
-    /* значення для SemiBold */
     font-style: normal;
+    font-display: swap;
 }

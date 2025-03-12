@@ -1,0 +1,114 @@
+.faq {
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+.faq-title {
+  margin-bottom: 32px;
+}
+.faq-list-title {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  border-top: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.faq-open-svg {
+  flex-shrink: 0;
+}
+/* .faq-list {
+  min-width: 343px;
+} */
+.container-faq {
+  /* max-width: 343px; */
+  margin: 0 auto;
+}
+/* .faq-list-item {
+    margin-bottom: 20px;
+  } */
+.faq-list-item:last-child .faq-list-title {
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+}
+/* .faq-list-item[data-element] .faq-list-item-paragraph {
+  display: none;
+}
+
+.faq-list-item:active .faq-open-svg {
+  transform: rotate(180deg);
+} */
+
+@media screen and (min-width: 768px) {
+  .faq {
+    padding-top: 48px;
+    padding-bottom: 96px;
+  }
+  .faq-list-title {
+    padding: 32px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .faq {
+    padding-top: 82px;
+    padding-bottom: 164px;
+  }
+  .faq-list-item:last-child .faq-list-title {
+    border-bottom: none;
+  }
+  .faq-list-title {
+    padding: 32px;
+  }
+  .faq-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px; /* Відстань між елементами */
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2); /* Лінія під усім списком */
+    position: relative;
+  }
+  .faq-list-item {
+    flex: 1 1 calc(50% - 10px); /* Ширина для двох колонок */
+    min-width: 332px; /* Мінімальна ширина елементів */
+    box-sizing: border-box;
+  } /* Коректний розрахунок розмірів */
+  .faq-list-item:nth-child(4) {
+    order: 2;
+  }
+  .faq-list-item:nth-child(5) {
+    order: 4;
+  }
+
+  .faq-list-item:nth-child(6) {
+    order: 6;
+  }
+
+  .faq-list-item:nth-child(1) {
+    order: 1;
+  }
+
+  .faq-list-item:nth-child(2) {
+    order: 3;
+  }
+
+  .faq-list-item:nth-child(3) {
+    order: 5;
+  }
+
+  .faq-list-item:nth-child(odd) {
+    border-right: 1px solid rgba(250, 250, 250, 0.2);
+  }
+  .faq-list-item:nth-child(even) {
+    border-right: none;
+  }
+
+  /* Останній елемент не має лінії між стовпцями */
+  /* .faq-list-item:last-child {
+    border-right: none;
+  }
+  .faq-list-item:last-child .faq-list-title {
+    border-bottom: none;
+  } */
+  /* .faq-list-item:nth-child(odd) {
+    border-right: 1px solid rgba(250, 250, 250, 0.2);
+  } */
+}

@@ -1,0 +1,330 @@
+.header-section {
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 32px 0;
+  background-color: transparent;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 16px;
+}
+
+/* Стилі для логотипу */
+.logo {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.logo-image {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.logo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-text {
+  vertical-align: top;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 0.9;
+  color: #fafafa;
+}
+
+/* Стилі для кнопки меню */
+.menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fafafa;
+  padding: 0;
+  margin-left: auto;
+}
+
+.menu-toggle-text {
+  display: none;
+}
+
+.menu-toggle-img {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+/* Стилі для меню */
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: url('/img/header/bg-mob-x1.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 16px;
+  transition: right 0.3s ease;
+  z-index: 1001;
+}
+
+.menu-mobile img {
+  width: 378px;
+  height: 100%;
+}
+
+.menu-mobile.active {
+  right: 0;
+}
+
+.menu-desktop {
+  display: none;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 50px; */
+}
+
+.menu-title {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.menu-close {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-close img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Стилі для навігації */
+.navigation {
+  display: none;
+  margin: auto;
+}
+
+.navigation,
+.menu-close {
+  display: none;
+}
+
+.menu.active .navigation,
+.menu.active .menu-close {
+  display: block;
+}
+
+.navigation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.navigation-item {
+  text-align: center;
+}
+
+.navigation-link {
+  color: #fafafa;
+  /* text-decoration: underline;
+  text-decoration-skip-ink: none; */
+  line-height: normal;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.navigation-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: #fafafa;
+}
+
+.navigation-link:hover {
+  color: #c6e327;
+}
+
+/* Стилі для кнопки замовлення */
+.order-button {
+  font-size: 14px;
+  display: inline-block;
+  background-color: #c6e327;
+  color: #fafafa;
+  padding: 14px 31px;
+  border-radius: 60px;
+  text-align: center;
+  margin-bottom: 32px;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+  align-self: center;
+}
+
+.order-button:hover {
+  background-color: #a0bc22;
+}
+
+.desktop-order-button {
+  display: none;
+}
+
+.mobile-order-button {
+  display: block;
+}
+
+/* Стилі для оверлею */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: none;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  display: none;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ========================================TAB============================================= */
+/* Медіа-запити */
+@media (min-width: 768px) {
+  .header-container {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 32px;
+    margin: 0;
+  }
+
+  .menu-toggle {
+    padding: 10px;
+    margin-left: 0;
+  }
+
+  .menu-toggle-text {
+    display: inline;
+    text-decoration: underline;
+  }
+
+  .menu-toggle-img {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: none;
+  }
+
+  .menu-desktop {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 138px;
+    height: 0;
+    background: none;
+    /* flex-direction: column; */
+    /* justify-content: flex-start; */
+    /* padding: 0; */
+    transition: all 0.3s ease;
+    display: none;
+    z-index: 1001;
+  }
+
+  .menu-desktop.active {
+    display: block;
+    transform: translateX(-50%);
+  }
+
+  .menu-desktop .menu-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+  }
+
+  .navigation {
+    margin-top: 36px;
+  }
+
+  .menu-desktop .navigation-list {
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px 10px;
+  }
+
+  /* .navigation-item {
+    margin: 0 16px;
+    text-align: center;
+  } */
+
+  .menu-desktop .navigation-link {
+    font-size: 16px;
+    text-decoration: none;
+  }
+  /* 
+  .navigation-link::after {
+    display: none;
+  } */
+
+  .order-button {
+    margin-top: 0;
+    padding: 18px 24px;
+    width: 163px;
+    font-size: 16px;
+    margin-bottom: 0;
+    line-height: normal;
+  }
+  .btn-order-container {
+    padding: 0;
+  }
+
+  .navigation-link::after {
+    display: none;
+  }
+
+  .desktop-order-button {
+    display: block;
+  }
+  .mobile-order-button {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .menu-desktop {
+    width: 138px;
+  }
+}

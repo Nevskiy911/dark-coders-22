@@ -28,12 +28,13 @@ form.addEventListener('submit', async (evt) => {
             title: "Sorry, an error occurred",
             text: "Please, correct the data and try again!",
             color: "#fafafa",
-            background: "#c6e327",
+            background: "#636061",
             width: "300px",
             timer: 4000,
             timerProgressBar: true,
             customClass: {
-                confirmButton: "custom-ok-button"
+                confirmButton: "custom-ok-button",
+                popup: "custom-swal"
             }
         });
     }

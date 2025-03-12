@@ -28,26 +28,28 @@
 }
 
 .icon-wrapper {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    padding: 12px;
     width: 48px;
     height: 48px;
     background-color: #C6E327;
     border-radius: 10px;
     margin-bottom: 64px;
 }
-
 .benefits-icon {
-    width: 24px;
-    height: 24px;
-    fill: none;
     stroke: #FAFAFA;
 }
 
 .benefits-subtitle {
     font-size: 20px;
     margin-bottom: 8px;
+    color: #FAFAFA;
+}
+
+.benefits-text {
+    color: rgba(250, 250, 250, 0.6);
 }
 
 .benefits-link-button {
@@ -61,6 +63,7 @@
     white-space: nowrap;
     justify-content: center;
     align-items: center;
+    color: #FAFAFA;
 }
 
 .benefits-link-button:hover,
