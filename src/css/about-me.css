@@ -43,7 +43,6 @@
   height: 500px;
 }
 
-/* ========== ACCORDION ========== */
 .accordion-about {
   margin-bottom: 32px;
 }
@@ -57,8 +56,6 @@
   margin-bottom: 0;
 }
 
-.ac-header-about {
-}
 .ac-trigger-wrapper {
   display: flex;
   justify-content: space-between;
@@ -88,7 +85,6 @@
 .ac-text-about {
   color: #fafafa;
 }
-/* Кнопка */
 
 .btn-about {
   background-color: #242527;
@@ -96,18 +92,27 @@
   height: 36px;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 50%;
-  padding: 9px;
+  padding: 8px 9px 9px 9px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-about:hover {
+  border-color: #fafafa;
 
   .about-icon-accordion {
     stroke: #fafafa;
   }
 }
 
+.about-icon-accordion {
+  stroke: rgba(250, 250, 250, 0.6);
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .ac.is-active .about-icon-accordion {
   transform: rotate(180deg);
 }
 
-/* ========== SWIPER ========== */
 .skills {
   max-width: 343px;
   display: flex;
@@ -121,8 +126,14 @@
 }
 
 .swiper-button-next-about {
-  width: 28px;
-  height: 28px;
+  background-color: inherit;
+  border: none;
+}
+
+.swiper-button-next-about:hover {
+  .about-icon-btn {
+    stroke: #fafafa;
+  }
 }
 
 .swiper-slide-about {
@@ -139,7 +150,6 @@
   stroke: rgba(250, 250, 250, 0.4);
 }
 
-/* ========== MEDIA QUERIES ========== */
 @media (min-width: 768px) {
   .about {
     padding-bottom: 48px;
@@ -163,8 +173,6 @@
     height: 700px;
   }
 
-  /* Accordion */
-
   .accordion-about {
     margin-bottom: 64px;
   }
@@ -185,15 +193,16 @@
     gap: 16px;
   }
 
-  /* Кнопка */
-
   .btn-about {
     width: 40px;
     height: 40px;
     padding: 10px;
   }
 
-  /* Swiper */
+  .about-icon-accordion {
+    width: 20px;
+    height: 20px;
+  }
 
   .skills {
     max-width: 704px;
@@ -210,6 +219,11 @@
   }
 
   .swiper-button-next-about {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-icon-btn {
     width: 40px;
     height: 40px;
   }
@@ -231,14 +245,12 @@
     margin-bottom: 0;
   }
 
-  /* Accordion */
-
   .accordion-about {
     margin-bottom: 96px;
   }
 
   .ac-panel-about {
-    padding-left: 50%;
+    padding-left: 50.5%;
   }
 
   .ac-panel-about.ac-panel-about-me {
@@ -248,8 +260,6 @@
   .ac-text-about {
     max-width: 612px;
   }
-
-  /* Swiper */
 
   .skills {
     max-width: 1376px;
