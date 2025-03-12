@@ -49,6 +49,12 @@
     font-size: 14px;
     letter-spacing: -0.02em;
     color: #fafafa;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-social-link:hover,
+.hero-social-link:focus {
+    border: 1px solid #fafafa;
 }
 
 .ig-link {
@@ -66,11 +72,6 @@
 
 .social-media-list .hero-social:last-child .hero-social-link {
     padding: 10px 10px;
-}
-
-.hero-social-link:hover,
-.hero-social-link:focus {
-    border-color: #fafafa;
 }
 
 @media screen and (min-width: 768px) {
