@@ -60,6 +60,10 @@
   display: none;
 }
 
+.menu-toggle-text:hover {
+  color: #c6e327;
+}
+
 .menu-toggle-btn {
   stroke: rgba(250, 250, 250, 0.4);
   display: block;
