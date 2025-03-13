@@ -75,11 +75,11 @@
     text-overflow: ellipsis;
 }
 
-.email {
+.email, .form-comment {
     margin-bottom: 4px;
 }
 
-.form-comment {
+.comment-wrapper {
     margin-bottom: 32px;
 }
 
@@ -225,6 +225,10 @@
     .email, .form-comment {
         width: 245px;
         padding-top: 46px;
+        margin-bottom: 0;
+    }
+
+    .comment-wrapper{
         margin-bottom: 0;
     }
 
