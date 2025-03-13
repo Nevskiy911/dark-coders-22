@@ -2,7 +2,7 @@
 @import url('./base.css');
 @import url('./container.css');
 @import url('../fonts/fonts.css');
-@import "modern-normalize";
+@import 'modern-normalize';
 
 @import url('./header.css');
 @import url('./hero.css');
