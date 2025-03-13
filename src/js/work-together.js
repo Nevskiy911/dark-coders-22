@@ -71,31 +71,38 @@ email.addEventListener('input', function () {
             message.className = 'message error-text';
         }
     } else {
-        resetValidation();
+        resetValidation('email');
     }
 })
 
 commentInput.addEventListener('input', function () {
-    if (commentInput.value.trim().length > 0) {
-        commentInput.classList.remove('error');
-        commentInput.classList.add('success');
-        commentText.textContent = 'Success!';
-        commentText.className = 'message success-text';
+    if (commentInput.value) {
+         if (commentInput.value.trim().length > 0) {
+            commentInput.classList.remove('error');
+            commentInput.classList.add('success');
+            commentText.textContent = 'Success!';
+            commentText.className = 'message success-text';
+        } else {
+            commentInput.classList.remove('success');
+            commentInput.classList.add('error');
+            commentText.textContent = 'Enter correct data';
+            commentText.className = 'message error-text';
+        }
     } else {
-        commentInput.classList.remove('success');
-        commentInput.classList.add('error');
-        commentText.textContent = 'Enter correct data';
-        commentText.className = 'message error-text';
+        resetValidation('comment');
     }
 });
 
-function resetValidation() {
-    email.value = "";
-    email.classList.remove('success', 'error');
-    message.textContent = "";
-    message.className = "message";
-    commentInput.value = ""; 
-    commentInput.classList.remove('success', 'error');
-    commentText.textContent = "";
-    commentText.className = "message";
+function resetValidation(inputName) {
+    if (inputName === 'email') {
+        email.value = "";
+        email.classList.remove('success', 'error');
+        message.textContent = "";
+        message.className = "message";
+    } else if (inputName === 'comment') {
+        commentInput.value = ""; 
+        commentInput.classList.remove('success', 'error');
+        commentText.textContent = "";
+        commentText.className = "message";
+    }
 }
