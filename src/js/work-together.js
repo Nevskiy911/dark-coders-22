@@ -20,25 +20,18 @@ form.addEventListener('submit', async (evt) => {
     evt.preventDefault();
     const userEmail = form.elements.email.value.trim();
     const userComment = form.elements.comments.value.trim();
-    const response = await postRequest(userEmail, userComment);
-    if (response.status === 201) {
+    let response;
+    if (isEmailValid() && isMessageValid()) {
+        response = await postRequest(userEmail, userComment);
+        if (response.status === 201) {
         openModal(response.data);
         form.reset();
         resetValidation();
     } else {
-        Swal.fire({
-            title: "Sorry, an error occurred",
-            text: "Please, correct the data and try again!",
-            color: "#fafafa",
-            background: "#1c1d20",
-            width: "300px",
-            timer: 4000,
-            timerProgressBar: true,
-            customClass: {
-                confirmButton: "custom-ok-button",
-                popup: "custom-swal"
-            }
-        });
+            showError();
+        }
+    } else {
+        showError();
     }
 })
 
@@ -59,7 +52,7 @@ async function postRequest(email, comment) {
 const pattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/i;
 email.addEventListener('input', function () {
     if (email.value) {
-        if (pattern.test(email.value)) {
+        if (isEmailValid()) {
             email.classList.remove('error');
             email.classList.add('success');
             message.textContent = 'Success!';
@@ -77,7 +70,7 @@ email.addEventListener('input', function () {
 
 commentInput.addEventListener('input', function () {
     if (commentInput.value) {
-         if (commentInput.value.trim().length > 0) {
+         if (isMessageValid()) {
             commentInput.classList.remove('error');
             commentInput.classList.add('success');
             commentText.textContent = 'Success!';
@@ -104,4 +97,28 @@ function resetValidation(inputName = null) {
         commentText.textContent = "";
         commentText.className = "message";
     }
+}
+
+const isEmailValid = () => {
+    return pattern.test(email.value);
+}
+
+const isMessageValid = () => {
+    return commentInput.value.trim().length > 0;
+}
+
+const showError = () => {
+    Swal.fire({
+            title: "Sorry, an error occurred",
+            text: "Please, correct the data and try again!",
+            color: "#fafafa",
+            background: "#1c1d20",
+            width: "300px",
+            timer: 4000,
+            timerProgressBar: true,
+            customClass: {
+                confirmButton: "custom-ok-button",
+                popup: "custom-swal"
+            }
+        });
 }
