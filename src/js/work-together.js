@@ -93,14 +93,13 @@ commentInput.addEventListener('input', function () {
     }
 });
 
-function resetValidation(inputName) {
-    if (inputName === 'email') {
-        email.value = "";
+function resetValidation(inputName = null) {
+    if (!inputName || inputName === 'email') {
         email.classList.remove('success', 'error');
         message.textContent = "";
         message.className = "message";
-    } else if (inputName === 'comment') {
-        commentInput.value = ""; 
+    } 
+    if (!inputName || inputName === 'comment') {
         commentInput.classList.remove('success', 'error');
         commentText.textContent = "";
         commentText.className = "message";
