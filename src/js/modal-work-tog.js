@@ -1,49 +1,77 @@
-const titleModal = document.querySelector('.title-modal');
-const textModal = document.querySelector('.text-modal');
+const refs = {
+  overlay: document.querySelector(".modal-overlay"),
+  modal: document.querySelector(".modal"),
+  title: document.querySelector(".title-modal"),
+  text: document.querySelector(".text-modal"),
+  closeBtn: document.querySelector(".close-btn"),
+};
 
-export function openModal(modalId) {
-  const modal = document.getElementById(modalId);
+const { overlay, modal, title, text, closeBtn } = refs;
 
-  if (!modal) {
-    iziToast.error({
-      title: 'Modal not found:',
-      message: modalId,
-      position: 'center',
-      timeout: 10000,
-    });
-
-    return;
-  }
-
-  modal.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-
-  document.addEventListener('keydown', handleKeydown);
-  document.addEventListener('click', handleBackdropClik);
+export function openModal(modalData) {
+  overlay.style.display = "flex";
+  title.textContent = modalData.title;
+  text.textContent = modalData.message;
+  document.body.classList.add("no-scroll");
 }
 
 function closeModal() {
-  const modal = document.getElementById('footer-modal');
-
-  if (modal) {
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
-
-    document.removeEventListener('keydown', handleKeydown);
-    document.removeEventListener('click', handleBackdropClik);
-  }
+  overlay.style.display = "none";
+  document.body.classList.remove("no-scroll");
 }
 
-function handleKeydown(event) {
-  if (event.key === 'Escape') {
+closeBtn.addEventListener("click", closeModal);
+
+document.addEventListener("click", evt => {
+  if (evt.target === overlay && !modal.contains(evt.target)) {
     closeModal();
   }
-}
+});
 
-function handleBackdropClik(event) {
-  if (event.target.id === 'footer-modal') {
+document.addEventListener("keydown", evt => {
+  if (evt.key === "Escape") {
     closeModal();
   }
-}
+});
 
-document.getElementById('close-btn').addEventListener('click', closeModal);
+// document.addEventListener("DOMContentLoaded", function () {
+//   const modal = document.getElementById("modal");
+//   const closeModal = document.getElementById("closeBtn");
+//   const form = document.querySelector(".contact-form");
+
+//   function openModal() {
+//     modal.style.display = "flex";
+//   }
+
+//   function closeModalFunc() {
+//     modal.style.display = "none";
+//   }
+
+// closeModal.addEventListener("click", closeModalFunc);
+
+//   window.addEventListener("click", event => {
+//     if (event.target === modal) {
+//       closeModalFunc();
+//     }
+//   });
+
+//   form.addEventListener("submit", async evt => {
+//     evt.preventDefault();
+//     const userEmail = form.elements.email.value.trim();
+//     const userComment = form.elements.comments.value.trim();
+
+//     async function postRequest(email, comment) {
+//       return new Promise(resolve => {
+//         setTimeout(() => resolve({ status: 201 }), 1000);
+//       });
+//     }
+
+//     const response = await postRequest(userEmail, userComment);
+//     if (response.status === 201) {
+//       openModal();
+//       form.reset();
+//     } else {
+//       alert("Submission failed. Please try again.");
+//     }
+//   });
+// });
