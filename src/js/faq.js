@@ -1,9 +1,8 @@
-// import Accordion from 'accordion-js';
-// import 'accordion-js/dist/accordion.min.css';
+import Accordion from 'accordion-js';
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   new Accordion('.faq-list', {
-//     duration: 400, // Час анімації (в мс)
-//     showMultiple: false, // Дозволяти відкривати лише один елемент
-//   });
-// });
+const accordionFaq = new Accordion('.accordion-faqs', {
+  firstOpen: true,
+  duration: 500,
+  showMultiple: true,
+  collapse: true,
+});
