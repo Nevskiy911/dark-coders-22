@@ -9,9 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const orderButtons = document.querySelectorAll('.order-button');
   const body = document.body;
 
-  let isMenuOpen = false; // Змінна для відстеження відкриття меню
+  let isMenuOpen = false;
 
-  // Функція для перемикання меню (відкриття/закриття)
   function toggleMenu() {
     if (!isMenuOpen) {
       // Відкриваємо меню
@@ -22,11 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
         body.style.overflow = 'hidden';
       } else {
         menuDesktop.classList.add('active');
-        // Не показуємо overlay для десктопної версії
       }
       isMenuOpen = true;
     } else {
-      // Закриваємо меню
       if (window.innerWidth < 768) {
         menuMobile.classList.remove('active');
         menuOverlay.classList.remove('active');
@@ -41,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Функція для закриття меню
   function closeMenu() {
     if (isMenuOpen) {
       menuMobile.classList.remove('active');
@@ -55,14 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Плавний скрол до якірних посилань
   function smoothScroll(target) {
     const element = document.querySelector(target);
     if (element) {
-      // Закриваємо меню перед скролом
       closeMenu();
 
-      // Затримка для коректного закриття меню перед скролом
       setTimeout(() => {
         window.scrollTo({
           top: element.offsetTop,
@@ -72,12 +65,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Додаємо обробники подій
-  menuToggle.addEventListener('click', toggleMenu); // Кнопка Menu і відкриває, і закриває
+  menuToggle.addEventListener('click', toggleMenu);
   menuCloseMobile.addEventListener('click', closeMenu);
   menuOverlay.addEventListener('click', closeMenu);
 
-  // Додаємо обробники для навігаційних посилань
   navLinks.forEach(link => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
@@ -86,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Додаємо обробник для кнопки "Order the project"
   orderButtons.forEach(button => {
     button.addEventListener('click', function (e) {
       e.preventDefault();
@@ -95,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Закриваємо меню при зміні розміру вікна
   window.addEventListener('resize', function () {
     if (isMenuOpen) {
       closeMenu();

@@ -35,8 +35,6 @@
   color: #fafafa;
 }
 
-/* Кнопка */
-
 .acc-btn-faqs {
   background-color: #242527;
   width: 34px;
@@ -65,8 +63,6 @@
   transform: rotate(180deg);
 }
 
-/* Параграф */
-
 .accordion-content-faqs {
   overflow: hidden;
   margin-bottom: 20px;
@@ -75,8 +71,6 @@
 .faqs-paragraph {
   margin-top: 16px;
 }
-
-/* -------------------- */
 
 @media screen and (min-width: 768px) {
   .faq {
@@ -102,15 +96,11 @@
     max-width: 485px;
   }
 
-  /* Кнопка */
-
   .acc-btn-faqs {
     width: 40px;
     height: 40px;
     padding: 9px;
   }
-
-  /* Параграф */
 
   .accordion-content-faqs {
     margin-bottom: 24px;
@@ -184,14 +174,3 @@
     padding-left: 32px;
   }
 }
-
-/* Останній елемент не має лінії між стовпцями */
-/* .faq-list-item:last-child {
-    border-right: none;
-  }
-  .faq-list-item:last-child .faq-list-title {
-    border-bottom: none;
-  } */
-/* .faq-list-item:nth-child(odd) {
-    border-right: 1px solid rgba(250, 250, 250, 0.2);
-  } */

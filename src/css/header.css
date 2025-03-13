@@ -19,7 +19,6 @@
   margin: 0 16px;
 }
 
-/* Стилі для логотипу */
 .logo {
   display: flex;
   align-items: flex-start;
@@ -47,33 +46,19 @@
   color: #fafafa;
 }
 
-/* Стилі для кнопки меню */
 .menu-toggle {
   display: block;
   background: none;
   border: none;
-  cursor: pointer;
-  color: #fafafa;
+
   padding: 0;
   margin-left: auto;
-}
-
-.menu-toggle-text {
-  display: none;
-}
-
-.menu-toggle-btn {
-  stroke: rgba(250, 250, 250, 0.4);
-  display: block;
-  width: 28px;
-  height: 28px;
 }
 
 .menu-open-icon {
   stroke: #fafafa;
 }
 
-/* Стилі для меню */
 .menu-mobile {
   position: fixed;
   top: 0;
@@ -133,7 +118,6 @@
   stroke: #fafafa;
 }
 
-/* Стилі для навігації */
 .navigation {
   display: none;
   margin: auto;
@@ -182,7 +166,6 @@
   color: #c6e327;
 }
 
-/* Стилі для кнопки замовлення */
 .order-button {
   font-size: 14px;
   display: inline-block;
@@ -209,7 +192,6 @@
   display: block;
 }
 
-/* Стилі для оверлею */
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -229,8 +211,6 @@
   visibility: visible;
 }
 
-/* ========================================TAB============================================= */
-/* Медіа-запити */
 @media (min-width: 768px) {
   .header-container {
     justify-content: space-between;
