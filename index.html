@@ -13,7 +13,7 @@
     <script type="module" crossorigin src="/dark-coders-22/index.js"></script>
     <link rel="modulepreload" crossorigin href="/dark-coders-22/assets/vendor-BeCdHPGG.js">
     <link rel="stylesheet" crossorigin href="/dark-coders-22/assets/vendor-BeNFBzCw.css">
-    <link rel="stylesheet" crossorigin href="/dark-coders-22/assets/index-BFfbs35M.css">
+    <link rel="stylesheet" crossorigin href="/dark-coders-22/assets/index-nnfUPPKC.css">
   </head>
   <body>
     <section class="header-section container">
@@ -1451,27 +1451,29 @@
         </h2>
         <p class="work-title-text">together</p>
       </div>
-      <form class="contact-form">
+      <form class="contact-form" novalidate>
         <div class="email-wrapper">
           <input
             type="email"
             name="email"
             class="email"
-            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
             placeholder="clients@gmail.com"
             autocomplete="off"
             required
           />
           <p class="message"></p>
         </div>
-        <input
-          type="text"
-          name="comments"
-          class="form-comment"
-          placeholder="comments"
-          autocomplete="off"
-          required
-        />
+        <div class="comment-wrapper">
+          <input
+            type="text"
+            name="comments"
+            class="form-comment"
+            placeholder="comments"
+            autocomplete="off"
+            required
+          />
+          <p class="comment"></p>
+        </div>
         <button class="form-button" type="submit">send</button>
       </form>
       <address class="address">
