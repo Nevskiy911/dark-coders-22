@@ -50,9 +50,21 @@
   display: block;
   background: none;
   border: none;
-
+  cursor: pointer;
+  color: #fafafa;
   padding: 0;
   margin-left: auto;
+}
+
+.menu-toggle-text {
+  display: none;
+}
+
+.menu-toggle-btn {
+  stroke: rgba(250, 250, 250, 0.4);
+  display: block;
+  width: 28px;
+  height: 28px;
 }
 
 .menu-open-icon {
@@ -227,6 +239,7 @@
   .menu-toggle-text {
     display: inline;
     text-decoration: underline;
+    color: #fafafa;
   }
 
   .menu-toggle-btn {
