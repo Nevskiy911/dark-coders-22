@@ -55,7 +55,7 @@
     margin-bottom: 64px;
 }
 
-.email-wrapper {
+.email-wrapper, comment-wrapper {
     margin-bottom: 16px;
 }
 
@@ -152,7 +152,7 @@
     border-color: #e74a3b !important;
 }
 
-.message {
+.message, .comment {
     font-size: 14px;
     margin-top: 5px;
     display: none;
@@ -171,7 +171,7 @@
 }
 
 .custom-ok-button {
-    background-color: #1C1D20 !important;
+    background-color: #a6c015 !important;
     color: #fafafa !important;
 }
 

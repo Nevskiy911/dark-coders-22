@@ -5,10 +5,12 @@ import { openModal } from "./modal-work-tog";
 const refs = {
     form: document.querySelector('.contact-form'),
     email: document.querySelector('.email'),
-    message: document.querySelector('.message')
+    message: document.querySelector('.message'),
+    commentInput: document.querySelector('.form-comment'),
+    commentText: document.querySelector('.comment'),
 }
 
-const { form, email, message } = refs;
+const { form, email, message, commentInput, commentText } = refs;
 
 const instance = axios.create({
     baseURL: 'https://portfolio-js.b.goit.study/api',
@@ -28,7 +30,7 @@ form.addEventListener('submit', async (evt) => {
             title: "Sorry, an error occurred",
             text: "Please, correct the data and try again!",
             color: "#fafafa",
-            background: "#636061",
+            background: "#1c1d20",
             width: "300px",
             timer: 4000,
             timerProgressBar: true,
@@ -54,9 +56,10 @@ async function postRequest(email, comment) {
     return response;
 }
 
+const pattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/i;
 email.addEventListener('input', function () {
-    if (email.value.length > 0) {
-        if (email.validity.valid) {
+    if (email.value) {
+        if (pattern.test(email.value)) {
             email.classList.remove('error');
             email.classList.add('success');
             message.textContent = 'Success!';
@@ -72,9 +75,27 @@ email.addEventListener('input', function () {
     }
 })
 
+commentInput.addEventListener('input', function () {
+    if (commentInput.value.trim().length > 0) {
+        commentInput.classList.remove('error');
+        commentInput.classList.add('success');
+        commentText.textContent = 'Success!';
+        commentText.className = 'message success-text';
+    } else {
+        commentInput.classList.remove('success');
+        commentInput.classList.add('error');
+        commentText.textContent = 'Enter correct data';
+        commentText.className = 'message error-text';
+    }
+});
+
 function resetValidation() {
     email.value = "";
     email.classList.remove('success', 'error');
     message.textContent = "";
     message.className = "message";
+    commentInput.value = ""; 
+    commentInput.classList.remove('success', 'error');
+    commentText.textContent = "";
+    commentText.className = "message";
 }
