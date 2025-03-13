@@ -46,7 +46,7 @@ swiper.init();
 
 const accordionAbout = new Accordion('.accordion-about', {
   firstOpen: true,
-  duration: 700,
+  duration: 500,
   showMultiple: false,
   collapse: true,
 });

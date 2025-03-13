@@ -2,113 +2,196 @@
   padding-top: 32px;
   padding-bottom: 64px;
 }
+
+.container-faq {
+  max-width: 343px;
+}
+
 .faq-title {
   margin-bottom: 32px;
 }
-.faq-list-title {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
+
+.accordion-item-faqs {
   padding-top: 20px;
-  padding-bottom: 20px;
-  align-items: center;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.accordion-item-faqs:first-child {
   border-top: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.faq-open-svg {
-  flex-shrink: 0;
-}
-/* .faq-list {
-  min-width: 343px;
-} */
-.container-faq {
-  /* max-width: 343px; */
-  margin: 0 auto;
-}
-/* .faq-list-item {
-    margin-bottom: 20px;
-  } */
-.faq-list-item:last-child .faq-list-title {
-  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-}
-/* .faq-list-item[data-element] .faq-list-item-paragraph {
-  display: none;
+.ac-trigger-faqs {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
-.faq-list-item:active .faq-open-svg {
+.accordion-header-faqs {
+  max-width: 265px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+/* Кнопка */
+
+.acc-btn-faqs {
+  background-color: #242527;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 50%;
+  padding: 7px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.acc-btn-faqs:hover {
+  border-color: #fafafa;
+
+  .faq-icon-accordion {
+    stroke: #fafafa;
+  }
+}
+
+.faq-icon-accordion {
+  stroke: rgba(250, 250, 250, 0.6);
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ac.is-active .faq-icon-accordion {
   transform: rotate(180deg);
-} */
+}
+
+/* Параграф */
+
+.accordion-content-faqs {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.faqs-paragraph {
+  margin-top: 16px;
+}
+
+/* -------------------- */
 
 @media screen and (min-width: 768px) {
   .faq {
     padding-top: 48px;
     padding-bottom: 96px;
   }
-  .faq-list-title {
-    padding: 32px;
+
+  .container-faq {
+    max-width: 704px;
+  }
+
+  .accordion-item-faqs {
+    padding-top: 32px;
+  }
+
+  .accordion-header-faqs {
+    max-width: 574px;
+  }
+
+  .accordion-container.accordion-faqs
+    .accordion-item-faqs:last-child
+    .accordion-header-faqs {
+    max-width: 485px;
+  }
+
+  /* Кнопка */
+
+  .acc-btn-faqs {
+    width: 40px;
+    height: 40px;
+    padding: 9px;
+  }
+
+  /* Параграф */
+
+  .accordion-content-faqs {
+    margin-bottom: 24px;
+    max-width: 656px;
+  }
+
+  .faqs-paragraph {
+    margin-top: 26px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .faq {
     padding-top: 82px;
     padding-bottom: 164px;
   }
-  .faq-list-item:last-child .faq-list-title {
-    border-bottom: none;
+
+  .container-faq {
+    max-width: 1376px;
   }
-  .faq-list-title {
-    padding: 32px;
+
+  .ac-trigger-faqs {
+    width: 656px;
   }
-  .faq-list {
+
+  .accordion-header-faqs {
+    max-width: 574px;
+  }
+
+  .accordion-content-faqs {
+    margin-bottom: 26px;
+  }
+
+  .accordion-faqs {
     display: flex;
     flex-wrap: wrap;
-    gap: 0px; /* Відстань між елементами */
-    border-bottom: 1px solid rgba(250, 250, 250, 0.2); /* Лінія під усім списком */
-    position: relative;
-  }
-  .faq-list-item {
-    flex: 1 1 calc(50% - 10px); /* Ширина для двох колонок */
-    min-width: 332px; /* Мінімальна ширина елементів */
-    box-sizing: border-box;
-  } /* Коректний розрахунок розмірів */
-  .faq-list-item:nth-child(4) {
-    order: 2;
-  }
-  .faq-list-item:nth-child(5) {
-    order: 4;
   }
 
-  .faq-list-item:nth-child(6) {
-    order: 6;
+  .accordion-item-faqs {
+    flex: 1 1 calc(50% - 10px);
   }
 
-  .faq-list-item:nth-child(1) {
+  .accordion-item-faqs:nth-child(1) {
     order: 1;
-  }
-
-  .faq-list-item:nth-child(2) {
-    order: 3;
-  }
-
-  .faq-list-item:nth-child(3) {
-    order: 5;
-  }
-
-  .faq-list-item:nth-child(odd) {
     border-right: 1px solid rgba(250, 250, 250, 0.2);
   }
-  .faq-list-item:nth-child(even) {
-    border-right: none;
+
+  .accordion-item-faqs:nth-child(2) {
+    order: 3;
+    border-right: 1px solid rgba(250, 250, 250, 0.2);
   }
 
-  /* Останній елемент не має лінії між стовпцями */
-  /* .faq-list-item:last-child {
+  .accordion-item-faqs:nth-child(3) {
+    order: 5;
+    border-right: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  .accordion-item-faqs:nth-child(4) {
+    order: 2;
+    border-top: 1px solid rgba(250, 250, 250, 0.2);
+    padding-left: 32px;
+  }
+
+  .accordion-item-faqs:nth-child(5) {
+    order: 4;
+    padding-left: 32px;
+  }
+
+  .accordion-item-faqs:nth-child(6) {
+    order: 6;
+    padding-left: 32px;
+  }
+}
+
+/* Останній елемент не має лінії між стовпцями */
+/* .faq-list-item:last-child {
     border-right: none;
   }
   .faq-list-item:last-child .faq-list-title {
     border-bottom: none;
   } */
-  /* .faq-list-item:nth-child(odd) {
+/* .faq-list-item:nth-child(odd) {
     border-right: 1px solid rgba(250, 250, 250, 0.2);
   } */
-}
