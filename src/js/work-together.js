@@ -18,13 +18,32 @@ const instance = axios.create({
 
 form.addEventListener('submit', async (evt) => {
     evt.preventDefault();
-    const userEmail = form.elements.email.value.trim();
-    const userComment = form.elements.comments.value.trim();
+    const userEmail = email.value.trim();
+    const userComment = commentInput.value.trim();
+
+    if (!userEmail || !userComment) {
+        Swal.fire({
+            title: "Fields are required!",
+            text: "Please fill in all fields before submitting.",
+            color: "#fafafa",
+            background: "#1c1d20",
+            width: "300px",
+            timer: 4000,
+            timerProgressBar: true,
+            customClass: {
+                confirmButton: "custom-ok-button",
+                popup: "custom-swal"
+            }
+        });
+        return;
+    }
+
     const response = await postRequest(userEmail, userComment);
-    if (response.status === 201) {
+
+    if (response?.status === 201) {
         openModal(response.data);
         form.reset();
-        resetValidation();
+        resetValidation(); 
     } else {
         Swal.fire({
             title: "Sorry, an error occurred",
@@ -40,58 +59,44 @@ form.addEventListener('submit', async (evt) => {
             }
         });
     }
-})
+});
 
 async function postRequest(email, comment) {
-    let response;
     try {
-        response = await instance.post('/requests', {
-            "email": email,
-            "comment": comment
-        });
+        return await instance.post('/requests', { email, comment });
     } catch (error) {
         console.log(error);
-        response = error;
+        return null;
     }
-    return response;
 }
 
-const pattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/i;
+const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/i;
+
 email.addEventListener('input', function () {
-    if (email.value) {
-        if (pattern.test(email.value)) {
-            email.classList.remove('error');
-            email.classList.add('success');
-            message.textContent = 'Success!';
-            message.className = 'message success-text';
-        } else {
-            email.classList.remove('success');
-            email.classList.add('error');
-            message.textContent = 'Invalid email, try again';
-            message.className = 'message error-text';
-        }
-    } else {
-        resetValidation('email');
-    }
-})
+    validateInput(email, message, emailPattern);
+});
 
 commentInput.addEventListener('input', function () {
-    if (commentInput.value) {
-         if (commentInput.value.trim().length > 0) {
-            commentInput.classList.remove('error');
-            commentInput.classList.add('success');
-            commentText.textContent = 'Success!';
-            commentText.className = 'message success-text';
+    validateInput(commentInput, commentText);
+});
+
+function validateInput(input, messageBox, pattern = /.*/) {
+    if (input.value.trim()) {
+        if (pattern.test(input.value.trim())) {
+            input.classList.remove('error');
+            input.classList.add('success');
+            messageBox.textContent = 'Success!';
+            messageBox.className = 'message success-text';
         } else {
-            commentInput.classList.remove('success');
-            commentInput.classList.add('error');
-            commentText.textContent = 'Enter correct data';
-            commentText.className = 'message error-text';
+            input.classList.remove('success');
+            input.classList.add('error');
+            messageBox.textContent = 'Invalid input, try again';
+            messageBox.className = 'message error-text';
         }
     } else {
-        resetValidation('comment');
+        resetValidation(input.name);
     }
-});
+}
 
 function resetValidation(inputName = null) {
     if (!inputName || inputName === 'email') {
